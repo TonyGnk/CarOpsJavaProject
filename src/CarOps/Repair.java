@@ -1,0 +1,41 @@
+package CarOps;
+
+public class Repair {
+
+	private int RepairID;
+	private String Status;
+
+	/**
+	 * 
+	 * @param SupervisorID
+	 */
+	public Repair GetRepair(int SupervisorID) {
+		// TODO - implement Repair.GetRepair
+		throw new UnsupportedOperationException();
+	}
+
+	public Repair Get_Wait_Repair() {
+		// TODO - implement Repair.Get_Wait_Repair
+		throw new UnsupportedOperationException();
+	}
+
+	public void ClaimRepair() {
+		// TODO - implement Repair.ClaimRepair
+		throw new UnsupportedOperationException();
+	}
+
+	public void Drop_Repair() {
+		// TODO - implement Repair.Drop_Repair
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 
+	 * @param SupervisorID
+	 */
+	public void Complete_Repair(int SupervisorID) {
+		// TODO - implement Repair.Complete_Repair
+		throw new UnsupportedOperationException();
+	}
+
+}
