@@ -34,10 +34,7 @@ public class Repair {
 		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * 
-	 * @param SupervisorID
-	 */
+
 	public void Complete_Repair(int SupervisorID) {
 		// TODO - implement Repair.Complete_Repair
 		throw new UnsupportedOperationException();

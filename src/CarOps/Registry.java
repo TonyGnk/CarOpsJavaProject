@@ -3,6 +3,7 @@ package CarOps;
 import java.util.ArrayList;
 
 public class Registry {
+	
 	ArrayList<AssignmentSparePart> AssignmentSpareParts = new ArrayList<AssignmentSparePart>();
 	ArrayList<Client> Clients = new ArrayList<Client>();
 	ArrayList<Engineer> Engineers = new ArrayList<Engineer>();
