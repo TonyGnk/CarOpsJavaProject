@@ -4,14 +4,18 @@ public class Repair {
 
 	private int RepairID;
 	private String Status;
+	private Registry registry;
 
-	/**
-	 * 
-	 * @param SupervisorID
-	 */
+
+	public Repair(int RepairID, String Status, Registry registry) {
+		this.RepairID = RepairID;
+		this.Status = Status;
+		this.registry = registry;
+				
+	}
+	
 	public Repair GetRepair(int SupervisorID) {
-		// TODO - implement Repair.GetRepair
-		throw new UnsupportedOperationException();
+		
 	}
 
 	public Repair Get_Wait_Repair() {
