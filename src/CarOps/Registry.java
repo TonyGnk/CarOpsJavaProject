@@ -64,6 +64,19 @@ public class Registry {
 		Vehicles.add(aVehicle);
 	}
 	
+	public ArrayList<Repair> GetRepairs(){
+		return Repairs;
+	}
+	
+	public ArrayList<Repair> GetWaitRepairs() {
+		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
+		for(Repair aRepair : Repairs) {
+			if(aRepair.getStatus().equals("wait")) {
+				TempRepairs.add(aRepair);
+			}
+		}
+		return TempRepairs;
+	}
 	
 	
 	

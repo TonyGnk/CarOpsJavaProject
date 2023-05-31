@@ -15,6 +15,7 @@ public class Repair {
 	}
 	
 	public Repair GetRepair(int SupervisorID) {
+		return null;
 		
 	}
 
@@ -40,6 +41,10 @@ public class Repair {
 	public void Complete_Repair(int SupervisorID) {
 		// TODO - implement Repair.Complete_Repair
 		throw new UnsupportedOperationException();
+	}
+
+	public String getStatus() {
+		return Status;
 	}
 
 }
