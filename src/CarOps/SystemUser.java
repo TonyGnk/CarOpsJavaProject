@@ -9,8 +9,6 @@ public class SystemUser {
 
 	public void LogIn() {
 		// TODO - implement SystemUser.LogIn
-		dddddddddd
-		ddddd
 		throw new UnsupportedOperationException();
 	}
 
@@ -18,5 +16,5 @@ public class SystemUser {
 		// TODO - implement SystemUser.LogOut
 		throw new UnsupportedOperationException();
 	}
-
+//Hello
 }
