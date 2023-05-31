@@ -16,5 +16,4 @@ public class SystemUser {
 		// TODO - implement SystemUser.LogOut
 		throw new UnsupportedOperationException();
 	}
-//Hello
 }
