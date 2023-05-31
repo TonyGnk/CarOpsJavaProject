@@ -13,13 +13,8 @@ public class RepairFolder {
 		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * 
-	 * @param EstTime
-	 */
 	public void SetEstimatedTime(String EstTime) {
-		// TODO - implement RepairFolder.SetEstimatedTime
-		throw new UnsupportedOperationException();
+		this.EstTime = EstTime;
 	}
 
 }
