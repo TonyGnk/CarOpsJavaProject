@@ -70,10 +70,10 @@ public class Registry {
 	
 	public ArrayList<Repair> GetWaitRepairs() {
 		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
+		
 		for(Repair aRepair : Repairs) {
-			if(aRepair.getStatus().equals("wait")) {
+			if(aRepair.getStatus().equals("wait")) 
 				TempRepairs.add(aRepair);
-			}
 		}
 		return TempRepairs;
 	}
