@@ -12,10 +12,7 @@ public class Vehicle {
 		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * 
-	 * @param Plate
-	 */
+
 	public Vehicle SearchVehicle(String Plate) {
 		// TODO - implement Vehicle.SearchVehicle
 		throw new UnsupportedOperationException();

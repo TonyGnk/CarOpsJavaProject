@@ -12,5 +12,4 @@ public class Car extends Vehicle {
 		// TODO - implement Car.Car
 		throw new UnsupportedOperationException();
 	}
-//φδσφφδσ
 }
