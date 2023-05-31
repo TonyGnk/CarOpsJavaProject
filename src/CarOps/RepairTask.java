@@ -1,8 +1,12 @@
 package CarOps;
 
 public class RepairTask {
+	
 
 	private int RepairTaskID;
+	private TaskAssignment aTaskAssignment;
+	private Task aTask;
+	private RepairFolder folder; 
 
 	/**
 	 * 
