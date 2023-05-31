@@ -8,7 +8,7 @@ public class Repair {
 
 
 	public Repair(int RepairID, String Status, Registry registry) {
-		this.RepairID = RepairID;
+		this.RepairID = registry.Repairs.size() + 1;
 		this.Status = Status;
 		this.registry = registry;
 				
