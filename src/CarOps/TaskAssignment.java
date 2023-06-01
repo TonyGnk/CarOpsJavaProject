@@ -3,26 +3,26 @@ package CarOps;
 public class TaskAssignment  {
 
 	RepairTask aRepairTask;
-	private int TaskAssignmentID;
+	private int ID;
 	private int time;
-
-
-	public TaskAssignment(SimpleEngineer aEngineer, RepairTask aRepairTask) {
+	Registry registry;
+	
+	public TaskAssignment(RepairTask aRepairTask,int time, Registry registry) {
+		this.aRepairTask = aRepairTask;
+		ID = registry.TaskAssignments.size()+1;
+		this.time = time;
+		this.registry = registry;
+	}
+	
+	public void PrintDetails() {
+		System.out.println("Task Assignment("+ID +")Details");
+		System.out.println();
 	}
 
-	public TaskAssignment GetTaskAssignment() {
-		// TODO - implement TaskAssignment.GetTaskAssignment
-		throw new UnsupportedOperationException();
-	}
-
-	public TaskAssignment GetTaskAssignment(int EmployeeID) {
-		// TODO - implement TaskAssignment.GetTaskAssignment
-		throw new UnsupportedOperationException();
-	}
+	
 
 	public void SetTime(int time) {
-		// TODO - implement TaskAssignment.SetTime
-		throw new UnsupportedOperationException();
+		this.time = time;
 	}
 
 }

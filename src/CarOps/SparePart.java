@@ -37,5 +37,15 @@ public class SparePart {
 		// TODO - implement SparePart.SetQuantity
 		throw new UnsupportedOperationException();
 	}
+	
+	public void PrintDetails() {
+		System.out.println("Name: "+ Name);
+		System.out.println("Cost per Piece: "+ CostPerPiece);
+		System.out.println("Total Pieces: "+ TotalPieces);
+	}
+	
+	public String GetName() {
+		return Name;
+	}
 
 }

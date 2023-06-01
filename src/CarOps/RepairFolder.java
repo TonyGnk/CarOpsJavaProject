@@ -11,6 +11,8 @@ public class RepairFolder {
 	private int TotalCost;
 	private Registry registry;
 	ArrayList<Repair> repairs = new ArrayList<Repair>();
+	ArrayList<RepairTask> RepairTasks = new ArrayList<RepairTask>();
+	
 
 	public void PrintDetails() {
 		System.out.println("Repair Folder Details:");
