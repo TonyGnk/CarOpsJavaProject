@@ -13,8 +13,6 @@ public class AssignmentSparePart{
 
 	public void PrintDetails() {
 		System.out.println("This Assignment Spare Part has a Spare Part called " +aSparePart.GetName() +"with"+ Quantity +"quantity");
-		
-		
 	}
 
 }
