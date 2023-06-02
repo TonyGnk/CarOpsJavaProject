@@ -1,5 +1,7 @@
 package CarOps;
 
+import java.util.ArrayList;
+
 public class Repair {
 
 	private int RepairID;
@@ -10,38 +12,54 @@ public class Repair {
 	public Repair(int RepairID, String Status, Registry registry) {
 		this.RepairID = registry.Repairs.size() + 1;
 		this.Status = Status;
-		this.registry = registry;
-				
+		this.registry = registry;			
 	}
 	
 	public Repair GetRepair(int SupervisorID) {
-		return null;
+		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
 		
-	}
-
-	public Repair Get_Wait_Repair() {
-		// TODO - implement Repair.Get_Wait_Repair
-		throw new UnsupportedOperationException();
+		for(Repair aRepair:TempRepairs) {
+			if(aRepair.getRepairID() == SupervisorID) {
+				return aRepair;
+			}
+		}
+		return null;		
 	}
 
 	public void ClaimRepair() {
-		// TODO - implement Repair.ClaimRepair
-		throw new UnsupportedOperationException();
+		Status = "claimed";
 	}
 
-	public void Drop_Repair() {
-		// TODO - implement Repair.Drop_Repair
-		throw new UnsupportedOperationException();
+	public void DropRepair() {
+		Status = "dropped";
 	}
-
 
 	public void Complete_Repair(int SupervisorID) {
-		// TODO - implement Repair.Complete_Repair
-		throw new UnsupportedOperationException();
+		Status = "completed";
 	}
 
 	public String getStatus() {
 		return Status;
+	}
+	
+	public int getRepairID() {
+		return RepairID;
+	}
+
+	public void setRepairID(int repairID) {
+		RepairID = repairID;
+	}
+
+	public Registry getRegistry() {
+		return registry;
+	}
+
+	public void setRegistry(Registry registry) {
+		this.registry = registry;
+	}
+
+	public void setStatus(String status) {
+		Status = status;
 	}
 
 }

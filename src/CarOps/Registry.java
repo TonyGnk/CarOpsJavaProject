@@ -14,6 +14,20 @@ public class Registry {
 	ArrayList<Session> Sessions = new ArrayList<Session>();
 	ArrayList<SparePart> SpareParts = new ArrayList<SparePart>();
 	ArrayList<TaskAssignment> TaskAssignments = new ArrayList<TaskAssignment>();
+	ArrayList<Task> Tasks = new ArrayList<Task>();
+	ArrayList<Vehicle> Vehicles = new ArrayList<Vehicle>();
+	
+	
+	public ArrayList<Repair> GetWaitRepairs() {
+		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
+		
+		for(Repair aRepair : Repairs) {
+			if(aRepair.getStatus().equals("wait")) 
+				TempRepairs.add(aRepair);
+		}
+		return TempRepairs;
+	}
+	
 	public ArrayList<AssignmentSparePart> getAssignmentSpareParts() {
 		return AssignmentSpareParts;
 	}
@@ -110,9 +124,6 @@ public class Registry {
 		Vehicles = vehicles;
 	}
 
-	ArrayList<Task> Tasks = new ArrayList<Task>();
-	ArrayList<Vehicle> Vehicles = new ArrayList<Vehicle>();
-	
 	public void AddNewItem(AssignmentSparePart anAssignmentSparePart) {
 		AssignmentSpareParts.add(anAssignmentSparePart);
 	}
@@ -164,17 +175,6 @@ public class Registry {
 	public ArrayList<Repair> GetRepairs(){
 		return Repairs;
 	}
-	
-	public ArrayList<Repair> GetWaitRepairs() {
-		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
-		
-		for(Repair aRepair : Repairs) {
-			if(aRepair.getStatus().equals("wait")) 
-				TempRepairs.add(aRepair);
-		}
-		return TempRepairs;
-	}
-	
 	
 	
 
