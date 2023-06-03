@@ -28,154 +28,75 @@ public class Registry {
 		return TempRepairs;
 	}
 	
-	public ArrayList<AssignmentSparePart> getAssignmentSpareParts() {
-		return AssignmentSpareParts;
-	}
-
-	public void setAssignmentSpareParts(ArrayList<AssignmentSparePart> assignmentSpareParts) {
-		AssignmentSpareParts = assignmentSpareParts;
-	}
-
-	public ArrayList<Client> getClients() {
-		return Clients;
-	}
-
-	public void setClients(ArrayList<Client> clients) {
-		Clients = clients;
-	}
-
-	public ArrayList<Engineer> getEngineers() {
-		return Engineers;
-	}
-
-	public void setEngineers(ArrayList<Engineer> engineers) {
-		Engineers = engineers;
-	}
-
-	public ArrayList<Repair> getRepairs() {
-		return Repairs;
-	}
-
-	public void setRepairs(ArrayList<Repair> repairs) {
-		Repairs = repairs;
-	}
-
-	public ArrayList<RepairFolder> getRepairFolders() {
-		return RepairFolders;
-	}
-
-	public void setRepairFolders(ArrayList<RepairFolder> repairFolders) {
-		RepairFolders = repairFolders;
-	}
-
-	public ArrayList<RepairTask> getRepairTasks() {
-		return RepairTasks;
-	}
-
-	public void setRepairTasks(ArrayList<RepairTask> repairTasks) {
-		RepairTasks = repairTasks;
-	}
-
-	public ArrayList<Report> getReports() {
-		return Reports;
-	}
-
-	public void setReports(ArrayList<Report> reports) {
-		Reports = reports;
-	}
-
-	public ArrayList<Session> getSessions() {
-		return Sessions;
-	}
-
-	public void setSessions(ArrayList<Session> sessions) {
-		Sessions = sessions;
-	}
-
-	public ArrayList<SparePart> getSpareParts() {
-		return SpareParts;
-	}
-
-	public void setSpareParts(ArrayList<SparePart> spareParts) {
-		SpareParts = spareParts;
-	}
-
-	public ArrayList<TaskAssignment> getTaskAssignments() {
-		return TaskAssignments;
-	}
-
-	public void setTaskAssignments(ArrayList<TaskAssignment> taskAssignments) {
-		TaskAssignments = taskAssignments;
-	}
-
-	public ArrayList<Task> getTasks() {
-		return Tasks;
-	}
-
-	public void setTasks(ArrayList<Task> tasks) {
-		Tasks = tasks;
-	}
-
-	public ArrayList<Vehicle> getVehicles() {
-		return Vehicles;
-	}
-
-	public void setVehicles(ArrayList<Vehicle> vehicles) {
-		Vehicles = vehicles;
-	}
-
-	public void AddNewItem(AssignmentSparePart anAssignmentSparePart) {
-		AssignmentSpareParts.add(anAssignmentSparePart);
-	}
+	public ArrayList<AssignmentSparePart> getAssignmentSpareParts() 
+	{ return AssignmentSpareParts; }
 	
-	public void AddNewItem(Client aClient) {
-		Clients.add(aClient);
-	}
+	public void setAssignmentSpareParts(ArrayList<AssignmentSparePart> assignmentSpareParts) 
+	{ AssignmentSpareParts = assignmentSpareParts; }
 	
-	public void AddNewItem(Engineer anEngineer) {
-		Engineers.add(anEngineer);
-	}
+	public void AddNewItem(AssignmentSparePart anAssignmentSparePart) 
+	{ AssignmentSpareParts.add(anAssignmentSparePart);}
+
 	
-	public void AddNewItem(Repair aRepair) {
-		Repairs.add(aRepair);
-	}
+	public ArrayList<Client> getClients() { return Clients; }
+	public void setClients(ArrayList<Client> clients) { Clients = clients; }
+	public void AddNewItem(Client aClient) { Clients.add(aClient); }
+
 	
-	public void AddNewItem(RepairFolder aRepairFolder) {
-		RepairFolders.add(aRepairFolder);
-	}
+	public ArrayList<Engineer> getEngineers() { return Engineers; }
+	public void setEngineers(ArrayList<Engineer> engineers) { Engineers = engineers; }
+	public void AddNewItem(Engineer anEngineer) { Engineers.add(anEngineer); }
+
 	
-	public void AddNewItem(RepairTask aRepairTask) {
-		RepairTasks.add(aRepairTask);
-	}
+	public ArrayList<Repair> getRepairs() { return Repairs; }
+	public void setRepairs(ArrayList<Repair> repairs) { Repairs = repairs; }
+	public void AddNewItem(Repair aRepair) { Repairs.add(aRepair); }
 	
-	public void AddNewItem(Report aReport) {
-		Reports.add(aReport);
-	}
+	public ArrayList<RepairFolder> getRepairFolders() { return RepairFolders;}
+	public void setRepairFolders(ArrayList<RepairFolder> repairFolders) {RepairFolders = repairFolders;}
+	public void AddNewItem(RepairFolder aRepairFolder) { RepairFolders.add(aRepairFolder); }
+
 	
-	public void AddNewItem(Session aSession) {
-		Sessions.add(aSession);
-	}
+	public ArrayList<RepairTask> getRepairTasks() { return RepairTasks; }
+	public void setRepairTasks(ArrayList<RepairTask> repairTasks) { RepairTasks = repairTasks; }
+	public void AddNewItem(RepairTask aRepairTask) { RepairTasks.add(aRepairTask); }
+
 	
-	public void AddNewItem(SparePart aSparePart) {
-		SpareParts.add(aSparePart);
-	}
+	public ArrayList<Report> getReports() { return Reports; }
+	public void setReports(ArrayList<Report> reports) { Reports = reports; }
+	public void AddNewItem(Report aReport) { Reports.add(aReport); }
+
 	
-	public void AddNewItem(TaskAssignment aTaskAssigment) {
-		TaskAssignments.add(aTaskAssigment);
-	}
+	public ArrayList<Session> getSessions() { return Sessions; }
+	public void setSessions(ArrayList<Session> sessions) { Sessions = sessions; }
+	public void AddNewItem(Session aSession) { Sessions.add(aSession); }
+
 	
-	public void AddNewItem(Task aTask) {
-		Tasks.add(aTask);
-	}
+	public ArrayList<SparePart> getSpareParts() { return SpareParts; }
+	public void setSpareParts(ArrayList<SparePart> spareParts) { SpareParts = spareParts; }
+	public void AddNewItem(SparePart aSparePart) { SpareParts.add(aSparePart); }
+
 	
-	public void AddNewItem(Vehicle aVehicle) {
-		Vehicles.add(aVehicle);
-	}
+	public ArrayList<TaskAssignment> getTaskAssignments() { return TaskAssignments; }
+	public void setTaskAssignments(ArrayList<TaskAssignment> taskAssignments) { TaskAssignments = taskAssignments;}
+	public void AddNewItem(TaskAssignment aTaskAssigment) { TaskAssignments.add(aTaskAssigment); }
 	
+	public ArrayList<Task> getTasks() { return Tasks; }
+	public void setTasks(ArrayList<Task> tasks) { Tasks = tasks; }
+	public void AddNewItem(Task aTask) { Tasks.add(aTask); }
+
+	public ArrayList<Vehicle> getVehicles() { return Vehicles; }
+	public void setVehicles(ArrayList<Vehicle> vehicles) { Vehicles = vehicles; }
+	public void AddNewItem(Vehicle aVehicle) { Vehicles.add(aVehicle); }
+	
+
+	
+
+	//Undefined Method
 	public ArrayList<Repair> GetRepairs(){
 		return Repairs;
 	}
 	
-	
+		
 
 }
