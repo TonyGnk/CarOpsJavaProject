@@ -19,6 +19,7 @@ public class Registry {
 	
 	
 	public ArrayList<Repair> GetWaitRepairs() {
+		
 		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
 		
 		for(Repair aRepair : Repairs) {
@@ -26,6 +27,26 @@ public class Registry {
 				TempRepairs.add(aRepair);
 		}
 		return TempRepairs;
+	}
+	
+	public Repair GetRepair(int SupervisorID) {
+		
+		for(Repair aRepair:Repairs) {
+			if(aRepair.getRepairID() == SupervisorID) {
+				return aRepair;
+			}
+		}
+		return null;		
+	}
+	
+	public TaskAssignment GetTaskAssignment(int EmployeeID) {
+		
+		for(TaskAssignment aTaskAssignment: TaskAssignments) {
+			if(aTaskAssignment.getID() == EmployeeID) {
+				return aTaskAssignment;
+			}
+		}
+		return null;
 	}
 	
 	public ArrayList<AssignmentSparePart> getAssignmentSpareParts() 

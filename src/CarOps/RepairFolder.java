@@ -5,33 +5,39 @@ import java.util.ArrayList;
 public class RepairFolder {
 
 	
-	private int RepairFolderID;
+	private int id;
 	private String status;
-	private String EstTime;
-	private int TotalCost;
+	private int estTime;
+	private int totalCost;
 	private Registry registry;
-	ArrayList<Repair> repairs = new ArrayList<Repair>();
-	ArrayList<RepairTask> RepairTasks = new ArrayList<RepairTask>();
+	private ArrayList<Task> TaskCatalog = new ArrayList<Task>();
+	private ArrayList<RepairTask> RepairTaskCatalog = new ArrayList<RepairTask>();
 	
 
 	public void PrintDetails() {
 		System.out.println("Repair Folder Details:");
-		System.out.println("ID: "+ RepairFolderID);
+		System.out.println("ID: "+ id);
 		System.out.println("Status: "+ status);
-		System.out.println("Estimated Time: "+ EstTime);
-		System.out.println("TotalCost: "+ TotalCost);
+		System.out.println("Estimated Time: "+ estTime);
+		System.out.println("TotalCost: "+ totalCost);
+		System.out.println("It contains these tasks:");
+		
+		for(int i=0; i<TaskCatalog.size(); i++) {
+			System.out.println("Task: "+ i+1);
+			TaskCatalog.get(i).PrintDetails();
+		}
 	}
-	
 
-	public RepairFolder(Registry registry, String status, String estTime, int totalCost) {
+	public RepairFolder(Registry registry, String status, int estTime, int totalCost) {
 		this.registry = registry;
-		RepairFolderID = registry.RepairFolders.size() + 1;
+		id = registry.RepairFolders.size() + 1;
 		this.status = status;
-		EstTime = estTime;
-		TotalCost = totalCost;
+		this.estTime = estTime;
+		this.totalCost = totalCost;
 	}
 	
-	public void AddRepair(Repair aRepair) {
-		repairs.add(aRepair);
+	public void addRepairTask(RepairTask aRepairTask) {
+		RepairTaskCatalog.add(aRepairTask);
 	}
+	
 }

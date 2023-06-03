@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 public class RepairTask {
 
-	private int RepairTaskID;
-	private Registry registry;
+	private int id;
 	private TaskAssignment aTaskAssignment;
 	private ArrayList<Task> tasks = new ArrayList<Task>();
-	private RepairFolder folder; 
+	private Registry registry;
 
 	public Task GetRepairTask(int RepairFolderID) {
 		// TODO - implement RepairTask.GetRepairTask

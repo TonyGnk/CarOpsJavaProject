@@ -4,39 +4,48 @@ import java.util.ArrayList;
 
 public class TaskAssignment  {
 
-	RepairTask aRepairTask;
-	private int ID;
+	private int id;
 	private int time;
-	ArrayList<AssignmentSparePart> AssignmentSparePartCatalog;
+	ArrayList<AssignmentSparePart> AssignmentSparePartCatalog = new ArrayList<AssignmentSparePart>(); //The catalog that contains only the spare parts for this task assignment
 	Registry registry;
 	
-	public TaskAssignment(RepairTask aRepairTask, int ID, int time, ArrayList<AssignmentSparePart> AssignmentSparePartCatalog, Registry registry) {
-		this.aRepairTask = aRepairTask;
-		this.ID = ID; 
+
+	
+	public void PrintDetails() {
+		System.out.println("Task Assignment("+id +") Details:");
+		System.out.println("Time: " +time);
+		System.out.println("Spare parts used: ");
+		System.out.println("Name     Quanity");
+		
+		for(int i=0; i<AssignmentSparePartCatalog.size(); i++) {
+			AssignmentSparePartCatalog.get(i).PrintDetails();
+		}
+		
+	}
+	
+	public void addSparePart(AssignmentSparePart anAssignmentSparePart) {
+		AssignmentSparePartCatalog.add(anAssignmentSparePart);
+	}
+	
+	public TaskAssignment(int id, int time, ArrayList<AssignmentSparePart> AssignmentSparePartCatalog, Registry registry) {
+		this.id = id; 
 		this.time = time;
 		this.AssignmentSparePartCatalog = AssignmentSparePartCatalog;
 		this.registry = registry;
 	}
 	
-	public void PrintDetails() {
-		System.out.println("Task Assignment("+ID +")Details:");
-		System.out.println();
-	}
-
-	public RepairTask getaRepairTask() {
-		return aRepairTask;
-	}
-
-	public void setaRepairTask(RepairTask aRepairTask) {
-		this.aRepairTask = aRepairTask;
+	public TaskAssignment(int id, int time, Registry registry) {
+		this.id = id; 
+		this.time = time;
+		this.registry = registry;
 	}
 
 	public int getID() {
-		return ID;
+		return id;
 	}
 
-	public void setID(int iD) {
-		ID = iD;
+	public void setID(int id) {
+		this.id = id;
 	}
 
 	public int getTime() {
@@ -59,15 +68,5 @@ public class TaskAssignment  {
 		this.time = time;
 	}
 	
-	public TaskAssignment GetTaskAssignment(int EmployeeID) {
-		ArrayList<TaskAssignment> TempTaskAssignments = registry.getTaskAssignments();
-		
-		for(TaskAssignment aTaskAssignment:TempTaskAssignments) {
-			if(aTaskAssignment.getID() == EmployeeID) {
-				return aTaskAssignment;
-			}
-		}
-		return null;
-	}
 
 }

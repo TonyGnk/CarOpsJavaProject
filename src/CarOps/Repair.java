@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 public class Repair {
 
-	private int RepairID;
-	private String Status;
+	private int id;
+	private String status;
 	private Registry registry;
 
 
 	public Repair(int RepairID, String Status, Registry registry) {
-		this.RepairID = registry.Repairs.size() + 1;
-		this.Status = Status;
+		this.id = registry.Repairs.size() + 1;
+		this.status = Status;
 		this.registry = registry;			
 	}
 	
 	public Repair GetRepair(int SupervisorID) {
-		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
+		ArrayList<Repair> TempRepairs = registry.Repairs;
 		
 		for(Repair aRepair:TempRepairs) {
 			if(aRepair.getRepairID() == SupervisorID) {
@@ -25,29 +25,35 @@ public class Repair {
 		}
 		return null;		
 	}
+	
+	public void printDetails() {
+		System.out.println("Repair("+id+") details:");
+		System.out.println("Status: "+ status);
+	}
+
 
 	public void ClaimRepair() {
-		Status = "claimed";
+		status = "claimed";
 	}
 
 	public void DropRepair() {
-		Status = "dropped";
+		status = "dropped";
 	}
 
-	public void Complete_Repair(int SupervisorID) {
-		Status = "completed";
+	public void CompleteRepair(int SupervisorID) {
+		status = "completed";
 	}
 
 	public String getStatus() {
-		return Status;
+		return status;
 	}
 	
 	public int getRepairID() {
-		return RepairID;
+		return id;
 	}
 
 	public void setRepairID(int repairID) {
-		RepairID = repairID;
+		repairID = repairID;
 	}
 
 	public Registry getRegistry() {
@@ -59,7 +65,7 @@ public class Repair {
 	}
 
 	public void setStatus(String status) {
-		Status = status;
+		this.status = status;
 	}
 
 }
