@@ -14,7 +14,7 @@ public class RepairFolder {
 	private ArrayList<RepairTask> RepairTaskCatalog = new ArrayList<RepairTask>();
 	
 //Second Constructor for use in the HostEngineer Class
-	public RepairFolder(int aAppointmentID){this.status="Undecided"; this.AppointmentID=aAppointmentID;}
+	public RepairFolder(int aAppointmentID){this.status="Undecided"; this.aAppointmentID=aAppointmentID;}
 	
 	public void PrintDetails() {
 		System.out.println("Repair Folder Details:");
@@ -41,6 +41,70 @@ public class RepairFolder {
 	
 	public void addRepairTask(RepairTask aRepairTask) {
 		RepairTaskCatalog.add(aRepairTask);
+	}
+
+	public int getSessionID() {
+		return SessionID;
+	}
+
+	public void setSessionID(int sessionID) {
+		SessionID = sessionID;
+	}
+
+	public int getRepairFolderid() {
+		return RepairFolderid;
+	}
+
+	public void setRepairFolderid(int repairFolderid) {
+		RepairFolderid = repairFolderid;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public int getEstTime() {
+		return estTime;
+	}
+
+	public void setEstTime(int estTime) {
+		this.estTime = estTime;
+	}
+
+	public int getTotalCost() {
+		return totalCost;
+	}
+
+	public void setTotalCost(int totalCost) {
+		this.totalCost = totalCost;
+	}
+
+	public Registry getRegistry() {
+		return registry;
+	}
+
+	public void setRegistry(Registry registry) {
+		this.registry = registry;
+	}
+
+	public ArrayList<Task> getTaskCatalog() {
+		return TaskCatalog;
+	}
+
+	public void setTaskCatalog(ArrayList<Task> taskCatalog) {
+		TaskCatalog = taskCatalog;
+	}
+
+	public ArrayList<RepairTask> getRepairTaskCatalog() {
+		return RepairTaskCatalog;
+	}
+
+	public void setRepairTaskCatalog(ArrayList<RepairTask> repairTaskCatalog) {
+		RepairTaskCatalog = repairTaskCatalog;
 	}
 	
 }
