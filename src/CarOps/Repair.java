@@ -15,17 +15,6 @@ public class Repair {
 		this.registry = registry;			
 	}
 	
-	public Repair GetRepair(int SupervisorID) {
-		ArrayList<Repair> TempRepairs = registry.Repairs;
-		
-		for(Repair aRepair:TempRepairs) {
-			if(aRepair.getRepairID() == SupervisorID) {
-				return aRepair;
-			}
-		}
-		return null;		
-	}
-	
 	public void printDetails() {
 		System.out.println("Repair("+id+") details:");
 		System.out.println("Status: "+ status);

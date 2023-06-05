@@ -21,7 +21,7 @@ public class Task {
 	}
 
 
-	public void UpdatTask(Task aTask ) {
+	public void UpdateTask(Task aTask ) {
 		// TODO - implement Task.UpdatTask
 		throw new UnsupportedOperationException();
 	}
