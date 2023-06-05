@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class RepairFolder {
 
-	
-	private int id;
+	private int SessionID;
+	private int RepairFolderid;
 	private String status;
 	private int estTime;
 	private int totalCost;
@@ -13,10 +13,12 @@ public class RepairFolder {
 	private ArrayList<Task> TaskCatalog = new ArrayList<Task>();
 	private ArrayList<RepairTask> RepairTaskCatalog = new ArrayList<RepairTask>();
 	
-
+//Second Constructor for use in the HostEngineer Class
+	public RepairFolder(int aAppointmentID){this.status="Undecided"; this.AppointmentID=aAppointmentID;}
+	
 	public void PrintDetails() {
 		System.out.println("Repair Folder Details:");
-		System.out.println("ID: "+ id);
+		System.out.println("ID: "+ RepairFolderid);
 		System.out.println("Status: "+ status);
 		System.out.println("Estimated Time: "+ estTime);
 		System.out.println("TotalCost: "+ totalCost);
@@ -28,12 +30,13 @@ public class RepairFolder {
 		}
 	}
 
-	public RepairFolder(Registry registry, String status, int estTime, int totalCost) {
+	public RepairFolder(Registry registry, String status, int estTime, int totalCost,int aSessionID) {
 		this.registry = registry;
-		id = registry.RepairFolders.size() + 1;
+		RepairFolderid = registry.RepairFolders.size() + 1;
 		this.status = status;
 		this.estTime = estTime;
 		this.totalCost = totalCost;
+		this.AppointmentID=aSessionID;
 	}
 	
 	public void addRepairTask(RepairTask aRepairTask) {
