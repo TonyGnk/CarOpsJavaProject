@@ -7,6 +7,7 @@ public class Repair {
 	private int Repairid;
 	private String status;
 	private Registry registry;
+	private static int totalRepairs=0;
 	
 
 
@@ -28,7 +29,7 @@ public class Repair {
 	}
 	
 	public void printDetails() {
-		System.out.println("Repair("+id+") details:");
+		System.out.println("Repair("+Repairid+") details:");
 		System.out.println("Status: "+ status);
 	}
 
@@ -50,7 +51,7 @@ public class Repair {
 	}
 	
 	public int getRepairID() {
-		return id;
+		return Repairid;
 	}
 
 	public void setRepairID(int repairID) {
