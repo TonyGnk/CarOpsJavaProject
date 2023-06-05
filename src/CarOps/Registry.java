@@ -48,7 +48,23 @@ public class Registry {
 		}
 		return null;
 	}
-	
+	public void UpdatTask(Task aTask, String Name, int cost, int EstimatedTime ) {
+		int position = SearchTask(aTask);
+		if (position != -1) {
+			Tasks.get(position).setName(Name);
+			Tasks.get(position).setCost(cost);
+			Tasks.get(position).setEstimatedTime(EstimatedTime);
+		}
+		
+	}
+	public int SearchTask(Task aTask) {
+		for(int i = 0; i<Tasks.size(); i++) {
+			if (Tasks.get(i).equals(aTask)) {
+				return i;
+			}
+		}
+		return -1;
+	}
 	public ArrayList<AssignmentSparePart> getAssignmentSpareParts() 
 	{ return AssignmentSpareParts; }
 	
