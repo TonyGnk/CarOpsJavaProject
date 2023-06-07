@@ -36,7 +36,7 @@ public class RepairFolder {
 		this.status = status;
 		this.estTime = estTime;
 		this.totalCost = totalCost;
-		this.AppointmentID=aSessionID;
+		this.appointmentID=aSessionID;
 	}
 	
 	public void addRepairTask(RepairTask aRepairTask) {
