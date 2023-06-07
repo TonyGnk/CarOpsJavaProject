@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class RepairTask {
 
-	private int id;
+	private int RepairTaskID;
 	private TaskAssignment aTaskAssignment;
-	private ArrayList<Task> tasks = new ArrayList<Task>();
+	private Task atask ;
 	private Registry registry;
 
 	public Task GetRepairTask(int RepairFolderID) {
@@ -19,8 +19,8 @@ public class RepairTask {
 	
 	}
 	
-	public void addTask(Task aTask) {
+	/*public void addTask(Task aTask) {
 		tasks.add(aTask);
-	}
+	}*/
 
 }

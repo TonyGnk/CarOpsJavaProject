@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class HostEngineer extends Engineer {
 	private Registry aRegistry;	
 	private RepairFolder aRepairFolder;
-	private Session aSession=new Session();
+	private Session aSession;
 	
 	
 	public HostEngineer (String username, String password, String firstName, String lastName)

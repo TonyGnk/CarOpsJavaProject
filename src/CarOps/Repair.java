@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Repair {
 
 	private int Repairid;
+	private RepairFolder aRepairFolder;
 	private String status;
 	private Registry registry;
 	private static int totalRepairs=0;

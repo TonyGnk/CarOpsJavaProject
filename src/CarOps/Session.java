@@ -5,6 +5,7 @@ public class Session {
 	private String Date;
 	private int SessionID;
 	public static int totalSessions=0;
+	private int FolderID;
 
 	
 	public Session() {};
