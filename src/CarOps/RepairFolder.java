@@ -14,7 +14,10 @@ public class RepairFolder {
 	private ArrayList<RepairTask> RepairTaskCatalog = new ArrayList<RepairTask>();
 	
 //Second Constructor for use in the HostEngineer Class
-	public RepairFolder(int aAppointmentID){this.status="Undecided"; this.aAppointmentID=aAppointmentID;}
+	public RepairFolder(int aAppointmentID){
+		this.status = "Undecided"; 
+		this.aAppointmentID=  aAppointmentID; //What is this?
+	}
 	
 	public void PrintDetails() {
 		System.out.println("Repair Folder Details:");
@@ -36,7 +39,7 @@ public class RepairFolder {
 		this.status = status;
 		this.estTime = estTime;
 		this.totalCost = totalCost;
-		this.appointmentID=aSessionID;
+		this.SessionID=aSessionID;
 	}
 	
 	public void addRepairTask(RepairTask aRepairTask) {
