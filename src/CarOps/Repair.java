@@ -4,19 +4,21 @@ import java.util.ArrayList;
 
 public class Repair {
 
-	private int id;
+	private int Repairid;
 	private String status;
 	private Registry registry;
+	private static int totalRepairs=0;
+	
 
 
 	public Repair(int RepairID, String Status, Registry registry) {
-		this.id = registry.Repairs.size() + 1;
+		this.Repairid = registry.Repairs.size() + 1;
 		this.status = Status;
 		this.registry = registry;			
 	}
 	
 	public void printDetails() {
-		System.out.println("Repair("+id+") details:");
+		System.out.println("Repair("+Repairid+") details:");
 		System.out.println("Status: "+ status);
 	}
 
@@ -38,7 +40,7 @@ public class Repair {
 	}
 	
 	public int getRepairID() {
-		return id;
+		return Repairid;
 	}
 
 	public void setRepairID(int repairID) {

@@ -3,7 +3,12 @@ package CarOps;
 public class Session {
 
 	private String Date;
+	private int SessionID;
+	public static int totalSessions=0;
 
+	
+	public Session() {};
+	 
 	public Session GetSession() {
 		// TODO - implement Sessions.GetSession
 		throw new UnsupportedOperationException();

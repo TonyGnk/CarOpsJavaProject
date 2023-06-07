@@ -21,10 +21,12 @@ public class Task {
 	}
 
 
+
 	public void UpdateTask(Task aTask ) {
 		// TODO - implement Task.UpdatTask
 		throw new UnsupportedOperationException();
 	}
+
 
 
 	
@@ -33,5 +35,31 @@ public class Task {
 		System.out.println("Cost "+ Cost);
 		System.out.println("Estimated time: "+ EstimatedTime);
 	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public float getCost() {
+		return Cost;
+	}
+
+	public void setCost(float cost) {
+		Cost = cost;
+	}
+
+	public int getEstimatedTime() {
+		return EstimatedTime;
+	}
+
+	public void setEstimatedTime(int estimatedTime) {
+		EstimatedTime = estimatedTime;
+	}
+	
+	
 
 }
