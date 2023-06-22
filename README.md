@@ -8,26 +8,30 @@ This repository contains a Java project that focuses on car operations and manag
 The CarOpsJavaProject aims to provide a comprehensive solution for managing various aspects of car operations. It utilizes Java programming language and incorporates object-oriented principles to create an efficient and scalable system. With this project, you can explore different functionalities related to car management, such as inventory management, maintenance tracking, and more.
 
 ## **Class Structure**
-Vehicle: Represents a vehicle object with properties like Plate,Brand,Model and ProductionYear.
+[Vehicle](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Vehicle.java): Represents a vehicle object with properties like Plate,Brand,Model and ProductionYear.
 
-SystemUser: Represents a user of the system with properties like username,password,firstname,lastname
+[SystemUser](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/SystemUser.java): Represents a user of the system with properties like username,password,firstname,lastname
 
-Engineer : Represents an engineer of the system which extends to a system user and checks if he is availiable or not
+[Engineer](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Engineer.java) : Represents an engineer of the system which extends to a system user and checks if he is availiable or not
 
-VehicleCatalog : Represents a catalogue of the vehicles
+[VehicleCatalog](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/VehicleCatalog.java) : Represents a catalogue of the vehicles
 
-Task : Represents the task  with properties like name,cost and estimatedtime
+[Task](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Task.java) : Represents the task  with properties like name,cost and estimatedtime
 
-SparePart : Represent the spareparts with properties like Name,CostPerPiece and TotalPieces
+[SparePart](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/SparePart.java) : Represent the spareparts with properties like Name,CostPerPiece and TotalPieces
 
-TaskAssignments : Represents the task of each engineer with properties like EngineerID,RepairTaskID,status,TaskAssignmentID and time
+[TaskAssignments](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/TaskAssignment.java) : Represents the task of each engineer with properties like EngineerID,RepairTaskID,status,TaskAssignmentID and time
 
-Report : Represents the reports with parametres like Date and ReportID
+[Report](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Report.java): Represents the reports with parametres like Date and ReportID
 
-Repair : Represents the repairs with parametres like repairid,repairfolder,status,registry and totalrepairs
+[Repair](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Repair.java) : Represents the repairs with parametres like repairid,repairfolder,status,registry and totalrepairs
 
-RepairFolder : Represents the repairfolders with parametres like session,repair,repairfolder,status,estimatedtime,totalcost and registry
+[RepairFolder](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/RepairFolder.java) : Represents the repairfolders with parametres like session,repair,repairfolder,status,estimatedtime,totalcost and registry
 
-Session : Represents the session of each repair with parameters like date,sessionid,totalsessions and folderid
-Exchanges : Represent the exchanges with parameters like cost and exchange id
-Registry : Contains the arraylists of the JavaProgram and the loops
+[Session](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Session.java) : Represents the session of each repair with parameters like date,sessionid,totalsessions and folderid
+
+[Exchanges](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Exchanges.java) : Represent the exchanges with parameters like cost and exchange id
+
+[Registry](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Registry.java) : Contains the arraylists of the JavaProgram and the loops
+
+[Main](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Main.java) : The entry point of the application, contains the main method to start the program.
