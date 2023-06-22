@@ -1,50 +1,56 @@
+//Tony - Not Done
 package CarOps;
+
+import java.util.ArrayList;
 
 public class Session {
 
-	private String Date;
-	private int SessionID;
-	public static int totalSessions=0;
-	private int FolderID;
+    private String date;
+    private int sessionID;
+    private int folderID;
+    private ArrayList<Session> sessions;
 
-	
-	public Session() {};
-	 
-	public Session GetSession() {
-		// TODO - implement Sessions.GetSession
-		throw new UnsupportedOperationException();
-	}
+    public Session() {
+        this.sessions = new ArrayList<>();
+    }
 
-	/**
-	 * 
-	 * @param name
-	 * @param plate
-	 * @param date
-	 */
-	public void NewSession(String name, String plate, String date) {
-		// TODO - implement Sessions.NewSession
-		throw new UnsupportedOperationException();
-	}
+    public Session(String date, int folderID) {
+        this.date = date;
+        this.folderID = folderID;
+        this.sessions = new ArrayList<>();
+        this.sessionID = this.sessions.size();
+    }
 
-	/**
-	 * 
-	 * @param Session
-	 * @param name
-	 * @param plate
-	 * @param date
-	 */
-	public void Edit(Session aSession , String name, String plate, String date) {
-		// TODO - implement Sessions.Edit
-		throw new UnsupportedOperationException();
-	}
+    public ArrayList<Session> getSessions() { return this.sessions; }
 
-	/**
-	 * 
-	 * @param Session
-	 */
-	public void DeleteSession(Session aSession ) {
-		// TODO - implement Sessions.DeleteSession
-		throw new UnsupportedOperationException();
-	}
+    public void setSessions(ArrayList<Session> sessions) { this.sessions = sessions; }
+
+    public void addSession(Session aSession) { 
+        aSession.sessionID = this.sessions.size();
+        this.sessions.add(aSession); 
+    }
+
+    public Session getSession(int folderID) {
+        for(Session session: this.sessions){
+            if(session.folderID == folderID){
+                return session;
+            }
+        }
+        return null;
+    }
+
+    public void edit(Session aSession, String date, int folderID) {
+        int index = this.sessions.indexOf(aSession);
+        if(index != -1){
+            aSession.date = date;
+            aSession.folderID = folderID;
+            this.sessions.set(index, aSession);
+        }
+    }
+
+    public void deleteSession(Session aSession) {
+        this.sessions.remove(aSession);
+    }
+}
 
 }

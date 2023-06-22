@@ -13,7 +13,6 @@ public class Owner extends SystemUser {
     public String getType() { return type; }
 }
 
-
 	/*EXAMPLES
 		System.out.println("Type: " + newUser.getType());
 	 */
