@@ -4,20 +4,20 @@ import java.util.ArrayList;
 
 public class RepairFolder {
 
-	private int SessionID;
-	private int anAppointmentID;
+	private Session aSession;
+	private Repair aRepair;
 	private int RepairFolderid;
 	private String status;
 	private int estTime;
 	private int totalCost;
 	private Registry registry;
-	private ArrayList<Task> TaskCatalog = new ArrayList<Task>();
+	//private ArrayList<Task> TaskCatalog = new ArrayList<Task>();
 	private ArrayList<RepairTask> RepairTaskCatalog = new ArrayList<RepairTask>();
 	
 //Second Constructor for use in the HostEngineer Class
 	public RepairFolder(int aAppointmentID){
 		this.status = "Undecided"; 
-		this.anAppointmentID =  aAppointmentID; //What is this?
+		//this.aAppointmentID=  aAppointmentID; //What is this?
 	}
 	
 	public void PrintDetails() {

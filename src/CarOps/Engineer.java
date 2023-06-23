@@ -5,6 +5,7 @@ public class Engineer extends SystemUser {
 	private int EngineerID;
 	private boolean Available;
 	public static int totalEngineers=0;
+	private TaskAssignment aTaskAssignment;
 	
 
 	public Engineer GetAvailableEngineer() {
@@ -29,5 +30,8 @@ public class Engineer extends SystemUser {
 	}
 	public void setAvailable(boolean available) {
 		Available = available;
+	}
+	public void PrintAssigmentDetails(TaskAssignment aTA) {
+		
 	}
 }

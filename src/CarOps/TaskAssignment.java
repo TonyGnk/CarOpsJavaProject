@@ -4,7 +4,10 @@ import java.util.ArrayList;
 
 public class TaskAssignment  {
 
-	private int id;
+	private int EngineerID;
+	private int RepairTaskID;
+	private String status ;
+	private int TaskAssignmentID;
 	private int time;
 	ArrayList<AssignmentSparePart> AssignmentSparePartCatalog = new ArrayList<AssignmentSparePart>(); //The catalog that contains only the spare parts for this task assignment
 	Registry registry;
@@ -12,7 +15,7 @@ public class TaskAssignment  {
 
 	
 	public void PrintDetails() {
-		System.out.println("Task Assignment("+id +") Details:");
+		System.out.println("Task Assignment("+TaskAssignmentID+") Details:");
 		System.out.println("Time: " +time);
 		System.out.println("Spare parts used: ");
 		System.out.println("Name     Quanity");
@@ -28,24 +31,24 @@ public class TaskAssignment  {
 	}
 	
 	public TaskAssignment(int id, int time, ArrayList<AssignmentSparePart> AssignmentSparePartCatalog, Registry registry) {
-		this.id = id; 
+		this.TaskAssignmentID = id; 
 		this.time = time;
 		this.AssignmentSparePartCatalog = AssignmentSparePartCatalog;
 		this.registry = registry;
 	}
 	
 	public TaskAssignment(int id, int time, Registry registry) {
-		this.id = id; 
+		this.TaskAssignmentID = id; 
 		this.time = time;
 		this.registry = registry;
 	}
 
 	public int getID() {
-		return id;
+		return TaskAssignmentID;
 	}
 
 	public void setID(int id) {
-		this.id = id;
+		this.TaskAssignmentID = id;
 	}
 
 	public int getTime() {

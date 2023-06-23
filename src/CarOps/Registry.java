@@ -134,7 +134,6 @@ public class Registry {
 	public ArrayList<SparePart> getSpareParts() { return SpareParts; }
 	public void setSpareParts(ArrayList<SparePart> spareParts) { SpareParts = spareParts; }
 	public void AddNewItem(SparePart aSparePart) { SpareParts.add(aSparePart); }
-
 	
 	public ArrayList<TaskAssignment> getTaskAssignments() { return TaskAssignments; }
 	public void setTaskAssignments(ArrayList<TaskAssignment> taskAssignments) { TaskAssignments = taskAssignments;}
