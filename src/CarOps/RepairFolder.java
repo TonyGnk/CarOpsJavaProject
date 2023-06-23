@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class RepairFolder {
 
 	private int SessionID;
+	private int anAppointmentID;
 	private int RepairFolderid;
 	private String status;
 	private int estTime;
@@ -16,7 +17,7 @@ public class RepairFolder {
 //Second Constructor for use in the HostEngineer Class
 	public RepairFolder(int aAppointmentID){
 		this.status = "Undecided"; 
-		this.aAppointmentID=  aAppointmentID; //What is this?
+		this.anAppointmentID =  aAppointmentID; //What is this?
 	}
 	
 	public void PrintDetails() {

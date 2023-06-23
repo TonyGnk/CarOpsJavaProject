@@ -14,6 +14,14 @@ public class SystemUser {
         this.firstName = firstName;
         this.lastName = lastName;
 	}
+	
+	public void printDetails() {
+		
+		System.out.println("Username: " +username);
+		System.out.println("Password: " +password);
+		System.out.println("First Name: " +firstName);
+		System.out.println("Last Name: " +lastName);
+	}
 			
 	public String getUsername() { return username; }
     public void setUsername(String username) { this.username = username; }

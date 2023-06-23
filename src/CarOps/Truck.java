@@ -2,18 +2,12 @@ package CarOps;
 
 public class Truck extends Vehicle {
 
-	private int UsefullLoad;
+	private int useFullLoad;
 
-	/**
-	 * 
-	 * @param Plate
-	 * @param Model
-	 * @param ProductionYear
-	 * @param UsefullLoad
-	 */
-	public Truck(String Plate, String Model, int ProductionYear, int UsefullLoad) {
-		// TODO - implement Truck.Truck
-		throw new UnsupportedOperationException();
+	public Truck(String plate, String brand, String model, int productionYear, int useFullLoad) {
+		
+		super(plate, brand, model, productionYear);
+		this.useFullLoad = useFullLoad;
 	}
 
 }

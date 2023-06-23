@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class Registry {
 	
-	ArrayList<AssignmentSparePart> AssignmentSpareParts = new ArrayList<AssignmentSparePart>();
+	//ArrayList<AssignmentSparePart> AssignmentSpareParts = new ArrayList<AssignmentSparePart>();
 	ArrayList<Client> Clients = new ArrayList<Client>();
 	ArrayList<Engineer> Engineers = new ArrayList<Engineer>();
 	ArrayList<Repair> Repairs = new ArrayList<Repair>();
 	ArrayList<RepairFolder> RepairFolders = new ArrayList<RepairFolder>();
-	ArrayList<RepairTask> RepairTasks = new ArrayList<RepairTask>();
+	//ArrayList<RepairTask> RepairTasks = new ArrayList<RepairTask>();
 	ArrayList<Report> Reports = new ArrayList<Report>();
 	ArrayList<Session> Sessions = new ArrayList<Session>();
 	ArrayList<SparePart> SpareParts = new ArrayList<SparePart>();
@@ -17,12 +17,12 @@ public class Registry {
 	ArrayList<Task> Tasks = new ArrayList<Task>();
 	ArrayList<Vehicle> Vehicles = new ArrayList<Vehicle>();
 	
-	
 	public ArrayList<Repair> GetWaitRepairs() {
 		
 		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
 		
 		for(Repair aRepair : Repairs) {
+			
 			if(aRepair.getStatus().equals("wait")) 
 				TempRepairs.add(aRepair);
 		}
@@ -32,6 +32,7 @@ public class Registry {
 	public Repair GetRepair(int SupervisorID) {
 		
 		for(Repair aRepair:Repairs) {
+			
 			if(aRepair.getRepairID() == SupervisorID) {
 				return aRepair;
 			}
@@ -42,14 +43,17 @@ public class Registry {
 	public TaskAssignment GetTaskAssignment(int EmployeeID) {
 		
 		for(TaskAssignment aTaskAssignment: TaskAssignments) {
+			
 			if(aTaskAssignment.getID() == EmployeeID) {
 				return aTaskAssignment;
 			}
 		}
 		return null;
 	}
-	public void UpdatTask(Task aTask, String Name, int cost, int EstimatedTime ) {
+	public void UpdateTask(Task aTask, String Name, int cost, int EstimatedTime ) {
+		
 		int position = SearchTask(aTask);
+		
 		if (position != -1) {
 			Tasks.get(position).setName(Name);
 			Tasks.get(position).setCost(cost);
@@ -58,22 +62,37 @@ public class Registry {
 		
 	}
 	public int SearchTask(Task aTask) {
+		
 		for(int i = 0; i<Tasks.size(); i++) {
-			if (Tasks.get(i).equals(aTask)) {
+			
+			if (Tasks.get(i).equals(aTask)){
 				return i;
 			}
 		}
 		return -1;
 	}
-	public ArrayList<AssignmentSparePart> getAssignmentSpareParts() 
-	{ return AssignmentSpareParts; }
 	
-	public void setAssignmentSpareParts(ArrayList<AssignmentSparePart> assignmentSpareParts) 
-	{ AssignmentSpareParts = assignmentSpareParts; }
+	public Vehicle searchVehicle(String plate) {
+		
+		for(Vehicle aVehicle: Vehicles) {
+			if(aVehicle.getPlate().equals(plate)) {
+				return aVehicle;
+			}
+		}
+		return null;
+	}
 	
-	public void AddNewItem(AssignmentSparePart anAssignmentSparePart) 
-	{ AssignmentSpareParts.add(anAssignmentSparePart);}
-
+	
+	/*
+	 * public ArrayList<AssignmentSparePart> getAssignmentSpareParts() { return
+	 * AssignmentSpareParts; }
+	 * 
+	 * public void setAssignmentSpareParts(ArrayList<AssignmentSparePart>
+	 * assignmentSpareParts) { AssignmentSpareParts = assignmentSpareParts; }
+	 * 
+	 * public void AddNewItem(AssignmentSparePart anAssignmentSparePart) {
+	 * AssignmentSpareParts.add(anAssignmentSparePart);}
+	 */
 	
 	public ArrayList<Client> getClients() { return Clients; }
 	public void setClients(ArrayList<Client> clients) { Clients = clients; }
@@ -94,9 +113,12 @@ public class Registry {
 	public void AddNewItem(RepairFolder aRepairFolder) { RepairFolders.add(aRepairFolder); }
 
 	
-	public ArrayList<RepairTask> getRepairTasks() { return RepairTasks; }
-	public void setRepairTasks(ArrayList<RepairTask> repairTasks) { RepairTasks = repairTasks; }
-	public void AddNewItem(RepairTask aRepairTask) { RepairTasks.add(aRepairTask); }
+	/*
+	 * public ArrayList<RepairTask> getRepairTasks() { return RepairTasks; } public
+	 * void setRepairTasks(ArrayList<RepairTask> repairTasks) { RepairTasks =
+	 * repairTasks; } public void AddNewItem(RepairTask aRepairTask) {
+	 * RepairTasks.add(aRepairTask); }
+	 */
 
 	
 	public ArrayList<Report> getReports() { return Reports; }
@@ -125,15 +147,4 @@ public class Registry {
 	public ArrayList<Vehicle> getVehicles() { return Vehicles; }
 	public void setVehicles(ArrayList<Vehicle> vehicles) { Vehicles = vehicles; }
 	public void AddNewItem(Vehicle aVehicle) { Vehicles.add(aVehicle); }
-	
-
-	
-
-	//Undefined Method
-	public ArrayList<Repair> GetRepairs(){
-		return Repairs;
-	}
-	
-		
-
 }
