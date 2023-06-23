@@ -28,11 +28,11 @@ public class RepairFolder {
 		System.out.println("TotalCost: "+ totalCost);
 		System.out.println("It contains these tasks:");
 		
-		for(int i=0; i<TaskCatalog.size(); i++) {
-			System.out.println("Task: "+ i+1);
-			TaskCatalog.get(i).PrintDetails();
+		//for(int i=0; i<TaskCatalog.size(); i++) {
+			//System.out.println("Task: "+ i+1);
+			//TaskCatalog.get(i).PrintDetails();
 		}
-	}
+	//}
 
 	public RepairFolder(Registry registry, String status, int estTime, int totalCost,int aSessionID) {
 		this.registry = registry;
@@ -40,19 +40,19 @@ public class RepairFolder {
 		this.status = status;
 		this.estTime = estTime;
 		this.totalCost = totalCost;
-		this.SessionID=aSessionID;
+		//this.SessionID=aSessionID;
 	}
 	
 	public void addRepairTask(RepairTask aRepairTask) {
 		RepairTaskCatalog.add(aRepairTask);
 	}
 
-	public int getSessionID() {
-		return SessionID;
-	}
+	//public int getSessionID() {
+		//return SessionID;
+	//}
 
 	public void setSessionID(int sessionID) {
-		SessionID = sessionID;
+		//SessionID = sessionID;
 	}
 
 	public int getRepairFolderid() {
@@ -95,12 +95,12 @@ public class RepairFolder {
 		this.registry = registry;
 	}
 
-	public ArrayList<Task> getTaskCatalog() {
-		return TaskCatalog;
-	}
+	//public ArrayList<Task> getTaskCatalog() {
+		//return TaskCatalog;
+	//}
 
 	public void setTaskCatalog(ArrayList<Task> taskCatalog) {
-		TaskCatalog = taskCatalog;
+		//TaskCatalog = taskCatalog;
 	}
 
 	public ArrayList<RepairTask> getRepairTaskCatalog() {

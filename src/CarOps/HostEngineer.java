@@ -12,9 +12,9 @@ public class HostEngineer extends Engineer {
 	{ 
 		super(username, password, firstName, lastName);}
 
-public void createNewFolder(){
-	aSession.totalSessions+=1;
-	aRepairFolder=new RepairFolder(aSession.totalSessions);
+//public void createNewFolder(){
+	//aSession.totalSessions+=1;
+	//RepairFolder=new RepairFolder(aSession.totalSessions);
 	
- }
+ //}
 }
