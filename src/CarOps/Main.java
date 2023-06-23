@@ -1,21 +1,27 @@
 package CarOps;
 
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
+import java.util.ArrayList;
 
-	public static void main(String[] args){
-//		Registry registry;
-//		
-//		
-//		RepairTask repairTask = 
-//		Task task1 = new Task("Αλλαγή λαδιών", 20);
-//		repairTask.addTask(task1);
-//		Task task2 = new Task("Αλλαγή φίλτρου καμπίνας", 5);
-//		repairTask.addTask(task2);
-//		Task task3 = new Task("Συντήρηση φρένων", 30);
-//		repairTask.addTask(task3);
+public class Main extends Application {
+    public static Registry registry;
+    @Override
 
+    public void start(Stage primaryStage) throws Exception{
+        registry = new Registry();
 
-	}
+        StartScr startScr = new StartScr(primaryStage);
+        Scene scene = new Scene(startScr, 800, 600);
 
+        primaryStage.setTitle("Συνεργείο Αυτοκινήτων");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
