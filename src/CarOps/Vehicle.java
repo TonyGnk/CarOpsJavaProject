@@ -2,20 +2,29 @@ package CarOps;
 
 public class Vehicle {
 
-	private String Plate;
-	private String Brand;
-	private String Model;
-	private int ProdYear;
+	private String plate;
+	private String brand;
+	private String model;
+	private int prodYear;
 
-	public Vehicle GetVehicle() {
-		// TODO - implement Vehicle.GetVehicle
-		throw new UnsupportedOperationException();
+	public void printDetails() {
+		
+		System.out.println("Plate: " +plate);
+		System.out.println("Brand: " +brand);
+		System.out.println("Model: " +model);
+		System.out.println("Production Year: " +prodYear);
+	}
+	
+	public Vehicle(String plate, String brand, String model, int prodYear) {
+		
+		this.plate = plate;
+		this.brand = brand;
+		this.model = model;
+		this.prodYear = prodYear;
 	}
 
-
-	public Vehicle SearchVehicle(String Plate) {
-		// TODO - implement Vehicle.SearchVehicle
-		throw new UnsupportedOperationException();
+	public String getPlate() {
+		return plate;
 	}
 
 }
