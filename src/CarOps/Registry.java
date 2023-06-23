@@ -2,6 +2,8 @@ package CarOps;
 
 import java.util.ArrayList;
 
+import screens.Session;
+
 public class Registry {
 	
 	//ArrayList<AssignmentSparePart> AssignmentSpareParts = new ArrayList<AssignmentSparePart>();
@@ -126,9 +128,9 @@ public class Registry {
 	public void AddNewItem(Report aReport) { Reports.add(aReport); }
 
 	
-	public ArrayList<Session> getSessions() { return Sessions; }
-	public void setSessions(ArrayList<Session> sessions) { Sessions = sessions; }
-	public void AddNewItem(Session aSession) { Sessions.add(aSession); }
+    //public ArrayList<Session> getSessions() { return Sessions; }
+    //public void setSessions(ArrayList<Session> sessions) { Sessions = sessions; }
+    public void addNewItem(String name, String date, String plate) { Sessions.add(new Session(name, date, plate, Sessions.size())); }
 
 	
 	public ArrayList<SparePart> getSpareParts() { return SpareParts; }
