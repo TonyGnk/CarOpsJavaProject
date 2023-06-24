@@ -10,7 +10,7 @@ public class Main extends Application {
     public static int i=1100; //1100
     public static int j=650; //650
     public static int ii=110; //1100
-    public static int jj=60; //650
+    public static int jj=35; //650
     public static String backgroundColor = "-fx-background-color: rgb(35, 35, 35);";
     public static String backgroundSecColor = "-fx-background-color: rgb(60, 60, 60);";
     public static String backgroundThirdColor = "-fx-background-color: rgb(75, 75, 75);";

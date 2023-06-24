@@ -3,17 +3,18 @@ package screens;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
-public class StartScr extends HBox {
-    private HBox buttonGroup;
+
+public class StartScr extends VBox {
+    private VBox allContentBox;
+    private HBox contentBox;
 
     public StartScr(Stage primaryStage) {
         super();
-        this.setAlignment(Pos.CENTER);
-        this.getStyleClass().add("screen");
-
         // Create instances of user screen classes
         DefScreen gramateia = new UserSecretaryHome(primaryStage);
         DefScreen idioktitis = new UserOwnerHome(primaryStage);
@@ -28,20 +29,36 @@ public class StartScr extends HBox {
         Button mhhanikosButton = new DefButtonStart("Μηχανικός", mhhanikos);
         Button mhhanikosEpilepButton = new DefButtonStart("Επιβλέπων Μηχανικός", mhhanikosEpilep);
 
-        // Add the buttons to the button group
-        buttonGroup = new HBox();
-        buttonGroup.setAlignment(Pos.CENTER);
-        buttonGroup.setSpacing(10);
-        buttonGroup.setPadding(new Insets(10));
+        
+        //this.setAlignment(Pos.CENTER);
+        
+        Label connectAsLabel = new DefTextHeader("Ποιος θα χρησιμοποιήσει το CarOps;");
+        
+        // Create a container for the buttons
+        allContentBox = new VBox();
+        allContentBox.setAlignment(Pos.CENTER);  // Align the big box in the center vertically
+        allContentBox.setMargin(connectAsLabel, new Insets(40));
+        allContentBox.setSpacing(80);
+        allContentBox.setPadding(new Insets(10));
+        
+        // Create a container for the buttons
+        contentBox = new HBox();
+        contentBox.setAlignment(Pos.CENTER);
+        contentBox.setSpacing(10);
+        contentBox.setPadding(new Insets(10));
 
-        buttonGroup.getChildren().addAll(
+        // Add the buttons to the container
+        contentBox.getChildren().addAll(
                 gramateiaButton,
                 idioktitisButton,
                 mhhanikosYpodButton,
                 mhhanikosButton,
                 mhhanikosEpilepButton
         );
-
-        this.getChildren().add(buttonGroup);
+        
+        // Add the label and the button container to the main VBox
+        allContentBox.getChildren().addAll(connectAsLabel, contentBox);
+        this.getChildren().add(allContentBox);
     }
 }
+

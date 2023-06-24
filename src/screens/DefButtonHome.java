@@ -33,7 +33,7 @@ public class DefButtonHome extends Button {
             stage.setScene(new Scene(userscreen, Main.i, Main.j));
         });
         
-        this.setPrefSize(110, 60);
+        this.setPrefSize(Main.ii, Main.jj);
         this.setTextFill(Color.web(Main.textcolour));
         this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");
 
