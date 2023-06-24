@@ -10,7 +10,9 @@ public class UserSecretaryHome extends DefScreen {
         this.setAlignment(Pos.CENTER);
 
         DefScreen rantebou = new SessionScr(primaryStage);
+        DefScreen rantebou2 = new SessionScr(primaryStage);
         Button rantebouButton = new DefButtonOption("Ραντεβού", rantebou);
-        this.getChildren().addAll(rantebouButton);
+        Button rantebouButton2 = new DefButtonOption("Ραντεβού", rantebou2);
+        this.getChildren().addAll(rantebouButton,rantebouButton2);
     }
 }

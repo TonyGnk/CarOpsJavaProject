@@ -8,11 +8,13 @@ import javafx.animation.Timeline;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.geometry.Insets;
 
 public class DefButtonOption extends Button {
 	private Timeline timeline; 
 	public DefButtonOption(String username, DefScreen userScreen) {
         super(username);
+        this.setPadding(new Insets(10));
 
         this.setOnAction(e -> {
             Stage stage = (Stage) this.getScene().getWindow();

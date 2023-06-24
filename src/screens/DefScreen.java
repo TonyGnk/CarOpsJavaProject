@@ -16,8 +16,8 @@ public class DefScreen extends HBox {
 
         buttonGroup = new HBox();
         buttonGroup.setAlignment(Pos.CENTER);
-        buttonGroup.setSpacing(10); // Ορισμός του αποστάσματος ανάμεσα στα παιδιά του HBox
-        buttonGroup.setPadding(new Insets(10)); // Ορισμός του padding για το HBox
+        //buttonGroup.setSpacing(10); // Ορισμός του αποστάσματος ανάμεσα στα παιδιά του HBox
+        //buttonGroup.setPadding(new Insets(10)); // Ορισμός του padding για το HBox
 
         buttonGroup.getChildren().add(returnButton);
 

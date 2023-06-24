@@ -12,7 +12,7 @@ public class SessionScr extends UserSecretaryScr {
 
         DefScreen dimiourgia = new EditSessionScr(primaryStage);
         Button dimiourgiaButton = new DefButtonOption("Νέο Ραντεβού", dimiourgia);
-        this.addButtonToGroup(dimiourgiaButton);
-        this.getChildren().addAll(dimiourgiaButton);
+        //this.addButtonToGroup(dimiourgiaButton);
+        this.getChildren().add(dimiourgiaButton);
     }
 }
