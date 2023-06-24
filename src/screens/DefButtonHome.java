@@ -1,25 +1,38 @@
 package screens;
 import CarOps.Main;
-
-import javafx.scene.control.Button;
-import javafx.scene.paint.Color;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class DefButtonOption extends Button {
+public class DefButtonHome extends Button {
 	private Timeline timeline; 
-	public DefButtonOption(String username, DefScreen userScreen) {
-        super(username);
+	public DefButtonHome(String type) {
+        super("Αρχική Οθόνη");
 
         this.setOnAction(e -> {
             Stage stage = (Stage) this.getScene().getWindow();
-            userScreen.setStyle(Main.backgroundColor);
-            stage.setScene(new Scene(userScreen, Main.i, Main.j));
-        });
+            DefScreen userscreen;
 
+            if (type.equals("Sec")) {
+                userscreen = new UserSecretaryHome(stage);
+            } else if (type.equals("Own")) {
+                userscreen = new UserOwnerHome(stage);
+            } else if (type.equals("Hos")) {
+                userscreen = new UserHostMechanicHome(stage);
+            } else if (type.equals("Mec")) {
+                userscreen = new UserMechanicHome(stage);
+            } else {
+                userscreen = new UserSupervisorHome(stage);
+            }
+            
+            userscreen.setStyle(Main.backgroundColor);
+            stage.setScene(new Scene(userscreen, Main.i, Main.j));
+        });
+        
         this.setPrefSize(110, 60);
         this.setTextFill(Color.web(Main.textcolour));
         this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");

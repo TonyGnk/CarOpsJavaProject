@@ -2,7 +2,6 @@ package CarOps;
 
 import java.util.ArrayList;
 
-import screens.Session;
 
 public class Registry {
 	

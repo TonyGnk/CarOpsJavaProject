@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class EditSessionScr extends DefUserScreen {
+public class EditSessionScr extends UserSecretaryScr {
     TextField nameField, plateField, dateField;
     Button submitButton;
 
@@ -38,6 +38,5 @@ public class EditSessionScr extends DefUserScreen {
         String date = dateField.getText();
 
         Main.registry.addNewItem(name, date, plate);
-
     }
 }
