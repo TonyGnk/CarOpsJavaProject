@@ -11,8 +11,7 @@ public class RepairFolder {
 	private String status;
 	private int estTime;
 	private int totalCost;
-	private ArrayList<Task> ListOfTasks=new ArrayList<Task>();
-	//private ArrayList<Task> TaskCatalog = new ArrayList<Task>();
+
 	private ArrayList<RepairTask> RepairTaskCatalog = new ArrayList<RepairTask>();
 	
     //Second Constructor for use in the HostEngineer Class
@@ -22,8 +21,10 @@ public class RepairFolder {
 		this.aSession=aSession;
 		this.estTime=estTime;
 		this.totalCost=totalCost;
-		this.ListOfTasks=aListOfTasks;
+		for(int i=0;i<aListOfTasks.size();i++) {
+		  this.RepairTaskCatalog.add(new RepairTask(aListOfTasks.get(i),this));
 		//this.aAppointmentID=  aAppointmentID; //What is this?
+	 }
 	}
 	
 	public void PrintDetails() {
@@ -51,7 +52,7 @@ public class RepairFolder {
 	//Έγκριση του φακέλου επισκευής απο την γραμματεία και δημιουργία επικευής που αντιστοιχεί στον φάκελο
 	public void setStatus(String status) {
 		this.status = status;
-		if(status.toLowerCase()=="Approved".toLowerCase()){
+		if(status.toLowerCase()=="approved"){
 			Repair newRepair=new Repair(this,"available");
 			
 		}

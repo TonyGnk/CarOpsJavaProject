@@ -8,6 +8,7 @@ public class Client {
 	private String Address;
 	private String email;
 	private int ClientID;
+	
 
 	/**
 	 * 
@@ -38,14 +39,15 @@ public class Client {
 	 * @param email
 	 */
 
-	public Client(String firstName, String lastName, int phone, String address, String email, int clientID) {
+	public Client(String firstName, String lastName, int phone, String address, String email) {
 		super();
 		FirstName = firstName;
 		LastName = lastName;
 		Phone = phone;
 		Address = address;
 		this.email = email;
-		ClientID = clientID;
+		ClientID = Registry.Clients.size() + 1;
+		Registry.Clients.add(this);
 	}
 
 	public String getFirstName() {

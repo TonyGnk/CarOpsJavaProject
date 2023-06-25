@@ -36,6 +36,12 @@ public class SupervisorEngineer extends Engineer {
 		aRepair.ClaimRepair(this);
 		
 	}
+	
+	private void AssignRepairTask(Engineer anEngineer,RepairTask aRepairTask) {
+		anEngineer.setAvailable(false);
+		TaskAssignment anAssignment=new TaskAssignment(anEngineer,aRepairTask);
+		anEngineer.setAvailable(false);
+	}
 
 	public Registry getaRegistry() {
 		return aRegistry;

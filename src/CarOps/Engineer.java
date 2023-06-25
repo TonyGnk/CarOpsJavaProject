@@ -18,7 +18,7 @@ public class Engineer extends SystemUser {
 	
 	//Προβολή της ανάθεσης από τον Μηχανικό
 	public void PrintAssignment() {
-		String assignmentname=aTaskAssignment.getaRepairTask().getAtask().getName();
+		String assignmentname=aTaskAssignment.getaRepairTask().getaTask().getName();
 		System.out.println("Ανάθεση :" );
 	}
 	

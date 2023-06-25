@@ -7,23 +7,22 @@ public class RepairTask {
 	
     private RepairFolder aRepairFolder;
 	private int RepairTaskID;
-	private TaskAssignment aTaskAssignment;
 	private Task aTask;
 	private Registry registry;
 	private String status;
-	public static int RepairTaskCount=0;
+	private static int RepairTaskCount=0;
 
 
 	public RepairTask( Task atask,RepairFolder aRepairFolder) {
 		
-		this.RepairTaskID = RepairTaskCount + 1;
+		this.RepairTaskID = RepairTaskCount + 1 ;
 		RepairTaskCount+=1;
 		this.aRepairFolder=aRepairFolder;
+		this.status="Unassigned";
+
 		this.aTask = atask;
 
 	}
-	
-	public void CreateCar() {}
 
 
 	/*public void printDetails() {
@@ -50,17 +49,6 @@ public class RepairTask {
 	public void setRepairTaskID(int repairTaskID) {
 		RepairTaskID = repairTaskID;
 	}
-
-
-	public TaskAssignment getaTaskAssignment() {
-		return aTaskAssignment;
-	}
-
-
-	public void setaTaskAssignment(TaskAssignment aTaskAssignment) {
-		this.aTaskAssignment = aTaskAssignment;
-	}
-
 
 	public Registry getRegistry() {
 		return registry;

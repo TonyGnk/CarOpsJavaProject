@@ -6,17 +6,17 @@ import java.util.ArrayList;
 public class Registry {
 	
 	//ArrayList<AssignmentSparePart> AssignmentSpareParts = new ArrayList<AssignmentSparePart>();
-	public ArrayList<Client> Clients = new ArrayList<Client>();
-	public ArrayList<Engineer> Engineers = new ArrayList<Engineer>();
-	public ArrayList<Repair> Repairs = new ArrayList<Repair>();
-	public ArrayList<RepairFolder> RepairFolders = new ArrayList<RepairFolder>();
+	public static ArrayList<Client> Clients = new ArrayList<Client>();
+	public static ArrayList<Engineer> Engineers = new ArrayList<Engineer>();
+	public static ArrayList<Repair> Repairs = new ArrayList<Repair>();
+	public static ArrayList<RepairFolder> RepairFolders = new ArrayList<RepairFolder>();
 	//ArrayList<RepairTask> RepairTasks = new ArrayList<RepairTask>();
-	public ArrayList<Report> Reports = new ArrayList<Report>();
-	public ArrayList<Session> Sessions = new ArrayList<Session>();
-	public ArrayList<SparePart> SpareParts = new ArrayList<SparePart>();
-	public ArrayList<TaskAssignment> TaskAssignments = new ArrayList<TaskAssignment>();
-	public ArrayList<Task> Tasks = new ArrayList<Task>();
-	public ArrayList<Vehicle> Vehicles = new ArrayList<Vehicle>();
+	public static ArrayList<Report> Reports = new ArrayList<Report>();
+	public static ArrayList<Session> Sessions = new ArrayList<Session>();
+	public static ArrayList<SparePart> SpareParts = new ArrayList<SparePart>();
+	public static ArrayList<TaskAssignment> TaskAssignments = new ArrayList<TaskAssignment>();
+	public static ArrayList<Task> Tasks = new ArrayList<Task>();
+	public static ArrayList<Vehicle> Vehicles = new ArrayList<Vehicle>();
 	
 	public ArrayList<Repair> GetSupervisorsEngRepairs(int SupervisorID){
 		ArrayList<Repair> ListOfRepairs=new ArrayList<Repair>();
