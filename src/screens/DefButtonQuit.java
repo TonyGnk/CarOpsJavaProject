@@ -1,5 +1,7 @@
 package screens;
 
+import java.io.FileNotFoundException;
+
 import CarOps.Main;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -17,7 +19,12 @@ public class DefButtonQuit extends Button {
 
         this.setOnAction(e -> {
             Stage stage = (Stage) this.getScene().getWindow();
-            stage.setScene(new Scene(new StartScr(stage), Main.i, Main.j));
+            try {
+				stage.setScene(new Scene(new StartScr(stage), Main.i, Main.j));
+			} catch (FileNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
             ((StartScr) stage.getScene().getRoot()).setStyle(Main.backgroundColor);
         });
 
