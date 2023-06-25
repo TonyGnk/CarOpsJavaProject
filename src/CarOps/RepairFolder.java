@@ -3,20 +3,26 @@ package CarOps;
 import java.util.ArrayList;
 
 public class RepairFolder {
-
+	 
+	private Registry aRegistry;
 	private Session aSession;
 	private Repair aRepair;
 	private int RepairFolderid;
 	private String status;
 	private int estTime;
 	private int totalCost;
-	private Registry registry;
+	private ArrayList<Task> ListOfTasks=new ArrayList<Task>();
 	//private ArrayList<Task> TaskCatalog = new ArrayList<Task>();
 	private ArrayList<RepairTask> RepairTaskCatalog = new ArrayList<RepairTask>();
 	
-//Second Constructor for use in the HostEngineer Class
-	public RepairFolder(int aAppointmentID){
-		this.status = "Undecided"; 
+    //Second Constructor for use in the HostEngineer Class
+	//Με τη χρήση αυτού του Constructor δημιουργείται ένας φάκελος που εκκρεμεί(stats="Pending") και για να αλλάξει πρέπει να εγκριθεί από την Γραμματεία
+	public RepairFolder(Session aSession,int estTime,int totalCost,ArrayList<Task> aListOfTasks){
+		this.status = "Pending"; 
+		this.aSession=aSession;
+		this.estTime=estTime;
+		this.totalCost=totalCost;
+		this.ListOfTasks=aListOfTasks;
 		//this.aAppointmentID=  aAppointmentID; //What is this?
 	}
 	
@@ -34,13 +40,21 @@ public class RepairFolder {
 		}
 	//}
 
-	public RepairFolder(Registry registry, String status, int estTime, int totalCost,int aSessionID) {
-		this.registry = registry;
-		RepairFolderid = registry.RepairFolders.size() + 1;
+	public RepairFolder(String status, int estTime, int totalCost,int aSessionID) {
+		RepairFolderid = aRegistry.RepairFolders.size() +1 ;
 		this.status = status;
 		this.estTime = estTime;
 		this.totalCost = totalCost;
 		//this.SessionID=aSessionID;
+	}
+	
+	//Έγκριση του φακέλου επισκευής απο την γραμματεία και δημιουργία επικευής που αντιστοιχεί στον φάκελο
+	public void setStatus(String status) {
+		this.status = status;
+		if(status.toLowerCase()=="Approved".toLowerCase()){
+			Repair newRepair=new Repair(this,"available");
+			
+		}
 	}
 	
 	public void addRepairTask(RepairTask aRepairTask) {
@@ -67,9 +81,6 @@ public class RepairFolder {
 		return status;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
 
 	public int getEstTime() {
 		return estTime;
@@ -87,13 +98,7 @@ public class RepairFolder {
 		this.totalCost = totalCost;
 	}
 
-	public Registry getRegistry() {
-		return registry;
-	}
 
-	public void setRegistry(Registry registry) {
-		this.registry = registry;
-	}
 
 	//public ArrayList<Task> getTaskCatalog() {
 		//return TaskCatalog;

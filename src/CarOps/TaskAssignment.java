@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class TaskAssignment  {
 
-	private int EngineerID;
-	private int RepairTaskID;
-	private String status ;
+	private Engineer anEngineer;
+	private RepairTask aRepairTask;
+	private boolean finished ;
 	private int TaskAssignmentID;
 	private int time;
 	ArrayList<AssignmentSparePart> AssignmentSparePartCatalog = new ArrayList<AssignmentSparePart>(); //The catalog that contains only the spare parts for this task assignment
@@ -70,6 +70,50 @@ public class TaskAssignment  {
 	public void SetTime(int time) {
 		this.time = time;
 	}
+
+
+
+	public boolean isFinished() {
+		return finished;
+	}
+
+	public void setFinished(boolean finished) {
+		this.finished = finished;
+	}
+
+	public Engineer getAnEngineer() {
+		return anEngineer;
+	}
+
+	public void setAnEngineer(Engineer anEngineer) {
+		this.anEngineer = anEngineer;
+	}
+
+	public RepairTask getaRepairTask() {
+		return aRepairTask;
+	}
+
+	public void setaRepairTask(RepairTask aRepairTask) {
+		this.aRepairTask = aRepairTask;
+	}
+
+	public int getTaskAssignmentID() {
+		return TaskAssignmentID;
+	}
+
+	public void setTaskAssignmentID(int taskAssignmentID) {
+		TaskAssignmentID = taskAssignmentID;
+	}
+
+	public ArrayList<AssignmentSparePart> getAssignmentSparePartCatalog() {
+		return AssignmentSparePartCatalog;
+	}
+
+	public void setAssignmentSparePartCatalog(ArrayList<AssignmentSparePart> assignmentSparePartCatalog) {
+		AssignmentSparePartCatalog = assignmentSparePartCatalog;
+	}
+	
+	
 	
 
 }

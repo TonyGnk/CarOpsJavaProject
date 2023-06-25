@@ -6,25 +6,38 @@ import java.util.ArrayList;
 public class Registry {
 	
 	//ArrayList<AssignmentSparePart> AssignmentSpareParts = new ArrayList<AssignmentSparePart>();
-	ArrayList<Client> Clients = new ArrayList<Client>();
-	ArrayList<Engineer> Engineers = new ArrayList<Engineer>();
-	ArrayList<Repair> Repairs = new ArrayList<Repair>();
-	ArrayList<RepairFolder> RepairFolders = new ArrayList<RepairFolder>();
+	public ArrayList<Client> Clients = new ArrayList<Client>();
+	public ArrayList<Engineer> Engineers = new ArrayList<Engineer>();
+	public ArrayList<Repair> Repairs = new ArrayList<Repair>();
+	public ArrayList<RepairFolder> RepairFolders = new ArrayList<RepairFolder>();
 	//ArrayList<RepairTask> RepairTasks = new ArrayList<RepairTask>();
-	ArrayList<Report> Reports = new ArrayList<Report>();
-	ArrayList<Session> Sessions = new ArrayList<Session>();
-	ArrayList<SparePart> SpareParts = new ArrayList<SparePart>();
-	ArrayList<TaskAssignment> TaskAssignments = new ArrayList<TaskAssignment>();
-	ArrayList<Task> Tasks = new ArrayList<Task>();
-	ArrayList<Vehicle> Vehicles = new ArrayList<Vehicle>();
+	public ArrayList<Report> Reports = new ArrayList<Report>();
+	public ArrayList<Session> Sessions = new ArrayList<Session>();
+	public ArrayList<SparePart> SpareParts = new ArrayList<SparePart>();
+	public ArrayList<TaskAssignment> TaskAssignments = new ArrayList<TaskAssignment>();
+	public ArrayList<Task> Tasks = new ArrayList<Task>();
+	public ArrayList<Vehicle> Vehicles = new ArrayList<Vehicle>();
 	
-	public ArrayList<Repair> GetWaitRepairs() {
+	public ArrayList<Repair> GetSupervisorsEngRepairs(int SupervisorID){
+		ArrayList<Repair> ListOfRepairs=new ArrayList<Repair>();
+		for(int i=0;i<Repairs.size();i++) {
+			if(Repairs.get(i).getStatus().toLowerCase()=="claimed") {
+				if(Repairs.get(i).getaSupervisorEngineer().getSupervisorID()==SupervisorID) ListOfRepairs.add(Repairs.get(i));
+			}
+			
+		}
+		if(ListOfRepairs.size()==0) return null;
+		else return ListOfRepairs;
+		
+	}
+	
+	public ArrayList<Repair> GetAvailabeRepairs() {
 		
 		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
 		
 		for(Repair aRepair : Repairs) {
 			
-			if(aRepair.getStatus().equals("wait")) 
+			if(aRepair.getStatus().toLowerCase().equals("available")) 
 				TempRepairs.add(aRepair);
 		}
 		return TempRepairs;

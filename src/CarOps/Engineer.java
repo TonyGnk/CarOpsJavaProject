@@ -7,6 +7,21 @@ public class Engineer extends SystemUser {
 	public static int totalEngineers=0;
 	private TaskAssignment aTaskAssignment;
 	
+	
+	//Ολοκλήρωση Ανάθεσης απο τον Μηχανικό
+	public void FinishAssignment(TaskAssignment anAssignment) {
+		this.Available=true;
+		anAssignment.setFinished(true);
+		anAssignment.getaRepairTask().setStatus("finished");
+		
+	};
+	
+	//Προβολή της ανάθεσης από τον Μηχανικό
+	public void PrintAssignment() {
+		String assignmentname=aTaskAssignment.getaRepairTask().getAtask().getName();
+		System.out.println("Ανάθεση :" );
+	}
+	
 
 	public Engineer GetAvailableEngineer() {
 		// TODO - implement �ngineer.GetAvailableEngineer

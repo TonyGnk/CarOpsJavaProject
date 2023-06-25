@@ -19,7 +19,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        registry = new Registry(); //New Regisry
+        registry = new Registry(); //New Registry
 
         //Start Screen
         StartScr startScr = new StartScr(primaryStage);

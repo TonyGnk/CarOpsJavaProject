@@ -8,14 +8,13 @@ public class Repair {
 	private RepairFolder aRepairFolder;
 	private String status;
 	private Registry registry;
-	private static int totalRepairs=0;
-	
+	private SupervisorEngineer aSupervisorEngineer;
 
 
-	public Repair(int RepairID, String Status, Registry registry) {
+	public Repair(RepairFolder aRepairFolder,String Status) {
+		this.aRepairFolder=aRepairFolder;
 		this.Repairid = registry.Repairs.size() + 1;
-		this.status = Status;
-		this.registry = registry;			
+		this.status = Status;		
 	}
 	
 	public void printDetails() {
@@ -24,8 +23,33 @@ public class Repair {
 	}
 
 
-	public void ClaimRepair() {
+	public void ClaimRepair(SupervisorEngineer aSuperEng) {
 		status = "claimed";
+		this.aSupervisorEngineer=aSuperEng;
+	}
+
+	public int getRepairid() {
+		return Repairid;
+	}
+
+	public void setRepairid(int repairid) {
+		Repairid = repairid;
+	}
+
+	public RepairFolder getaRepairFolder() {
+		return aRepairFolder;
+	}
+
+	public void setaRepairFolder(RepairFolder aRepairFolder) {
+		this.aRepairFolder = aRepairFolder;
+	}
+
+	public SupervisorEngineer getaSupervisorEngineer() {
+		return aSupervisorEngineer;
+	}
+
+	public void setaSupervisorEngineer(SupervisorEngineer aSupervisorEnginner) {
+		this.aSupervisorEngineer = aSupervisorEnginner;
 	}
 
 	public void DropRepair() {
