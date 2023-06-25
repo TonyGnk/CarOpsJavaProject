@@ -62,17 +62,7 @@ public class StartScr extends VBox {
                 mhhanikosButton,
                 mhhanikosEpilepButton
         );
-
-        //Δημιουργία μιας φωτογραφίας στο κέντρο της οθόνης που λέγεται user.png σε μέγεθος που να φαίνεται καλά και προσθήκη στην οθόνη
-        Image image = new Image(new FileInputStream("src\\resources\\user.png"));
-        ImageView imageView = new ImageView(image);
-        imageView.setFitHeight(200);
-        imageView.setFitWidth(200);
-        imageView.setPreserveRatio(true);
-        allContentBox.getChildren().add(imageView);
-        
-
-        
+               
 
         // Add the label and the button container to the main VBox
         allContentBox.getChildren().addAll(connectAsLabel, contentBox);
