@@ -70,21 +70,18 @@ public class StartScr extends VBox {
         closeButtonBox = new HBox(closeButton);
         closeButtonBox.setAlignment(Pos.CENTER);
 
-        // Load the image
-        Image image = new Image(new FileInputStream("C:\\ADBKit\\user.png"));
-        ImageView imageView = new ImageView(image);
-        imageView.setFitWidth(200);
-        imageView.setPreserveRatio(true);
-        imageView.setSmooth(true);
-        imageView.setCache(true);
-
-        // Set up the layout
-        setAlignment(Pos.CENTER);
-        setSpacing(40);
-        setPadding(new Insets(10));
-
+		/*
+		 * // Load the image Image image = new Image(new
+		 * FileInputStream("C:\\ADBKit\\user.png")); ImageView imageView = new
+		 * ImageView(image); imageView.setFitWidth(200);
+		 * imageView.setPreserveRatio(true); imageView.setSmooth(true);
+		 * imageView.setCache(true);
+		 * 
+		 * // Set up the layout setAlignment(Pos.CENTER); setSpacing(40); setPadding(new
+		 * Insets(10));
+		 */
         // Add the image view, the main VBox, and the close button to the root VBox
-        getChildren().addAll(imageView, allContentBox, closeButtonBox);
+        getChildren().addAll(allContentBox, closeButtonBox);
     }
 }
 
