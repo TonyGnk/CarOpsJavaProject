@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-	//ασδασδφσδφσδφ
+	
     public static Registry registry; //Global Registry
     //Window Size
     public static int i=1100; //1100
