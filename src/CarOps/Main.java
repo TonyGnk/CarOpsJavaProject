@@ -14,7 +14,7 @@ public class Main extends Application {
     public static String backgroundColor = "-fx-background-color: rgb(35, 35, 35);";
     public static String backgroundSecColor = "-fx-background-color: rgb(60, 60, 60);";
     public static String backgroundThirdColor = "-fx-background-color: rgb(75, 75, 75);";
-    public static String textcolour = "rgb(245, 245, 245)"
+    public static String textcolour = "rgb(245, 245, 245)";
 
     @Override
     public void start(Stage primaryStage) throws Exception{
