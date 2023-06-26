@@ -31,13 +31,13 @@ public class Registry {
 		
 	}
 	
-	public ArrayList<Repair> GetAvailabeRepairs() {
+	public ArrayList<Repair> GetWaitRepairs() {
 		
 		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
 		
 		for(Repair aRepair : Repairs) {
 			
-			if(aRepair.getStatus().toLowerCase().equals("available")) 
+			if(aRepair.getStatus().toLowerCase().equals("wait")) 
 				TempRepairs.add(aRepair);
 		}
 		return TempRepairs;
@@ -142,6 +142,7 @@ public class Registry {
 	
     //public ArrayList<Session> getSessions() { return Sessions; }
     //public void setSessions(ArrayList<Session> sessions) { Sessions = sessions; }
+	
     public void addNewItem(String name, String date, String plate) { Sessions.add(new Session(name, date, plate, Sessions.size())); }
 
 	

@@ -9,9 +9,13 @@ public class Report {
 	 * 
 	 * @param Type
 	 */
-	public Report GetReport(String Type) {
-		// TODO - implement Report.GetReport
-		throw new UnsupportedOperationException();
-	}
+    public Report() {
+    	
+    	this.ReportID=Registry.Reports.size()+1;
+    	Registry.Reports.add(this);
+    	
+    }
+	
+	
 
 }

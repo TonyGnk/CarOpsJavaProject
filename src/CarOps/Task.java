@@ -13,11 +13,14 @@ public class Task {
 		Name = name;
 		Cost = cost;
 		EstimatedTime = estimatedTime;
+		Registry.Tasks.add(this);
 	}
 	
 	public Task(String name, float cost) {
 		Name = name;
 		Cost = cost;
+		
+		Registry.Tasks.add(this);
 	}
 
 

@@ -14,9 +14,19 @@ public class RepairFolder {
 
 	private ArrayList<RepairTask> RepairTaskCatalog = new ArrayList<RepairTask>();
 	
+	//Έγκριση του φακέλου επισκευής απο την γραμματεία και δημιουργία επικευής που αντιστοιχεί στον φάκελο
+	public void setStatus(String status) {
+		this.status = status;
+		if(status.toLowerCase()=="approved"){
+			Repair newRepair=new Repair(this,"wait");
+			
+		}
+	}
+	
     //Second Constructor for use in the HostEngineer Class
 	//Με τη χρήση αυτού του Constructor δημιουργείται ένας φάκελος που εκκρεμεί(stats="Pending") και για να αλλάξει πρέπει να εγκριθεί από την Γραμματεία
 	public RepairFolder(Session aSession,int estTime,int totalCost,ArrayList<Task> aListOfTasks){
+		this.RepairFolderid=Registry.RepairFolders.size()+1;
 		this.status = "Pending"; 
 		this.aSession=aSession;
 		this.estTime=estTime;
@@ -25,6 +35,7 @@ public class RepairFolder {
 		  this.RepairTaskCatalog.add(new RepairTask(aListOfTasks.get(i),this));
 		//this.aAppointmentID=  aAppointmentID; //What is this?
 	 }
+		Registry.RepairFolders.add(this);
 	}
 	
 	public void PrintDetails() {
@@ -40,23 +51,8 @@ public class RepairFolder {
 			//TaskCatalog.get(i).PrintDetails();
 		}
 	//}
-
-	public RepairFolder(String status, int estTime, int totalCost,int aSessionID) {
-		RepairFolderid = aRegistry.RepairFolders.size() +1 ;
-		this.status = status;
-		this.estTime = estTime;
-		this.totalCost = totalCost;
-		//this.SessionID=aSessionID;
-	}
 	
-	//Έγκριση του φακέλου επισκευής απο την γραμματεία και δημιουργία επικευής που αντιστοιχεί στον φάκελο
-	public void setStatus(String status) {
-		this.status = status;
-		if(status.toLowerCase()=="approved"){
-			Repair newRepair=new Repair(this,"available");
-			
-		}
-	}
+
 	
 	public void addRepairTask(RepairTask aRepairTask) {
 		RepairTaskCatalog.add(aRepairTask);
