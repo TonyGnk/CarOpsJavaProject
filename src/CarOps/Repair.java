@@ -10,12 +10,14 @@ public class Repair {
 	private Registry registry;
 	private SupervisorEngineer aSupervisorEngineer;
 	private ArrayList<TaskAssignment> ListOfAssignments=new ArrayList<TaskAssignment>();
+	private ArrayList<RepairTask> ListOfRepairTasks=new ArrayList<RepairTask>();
 
 
 	public Repair(RepairFolder aRepairFolder,String Status) {
 		this.aRepairFolder=aRepairFolder;
 		this.Repairid = registry.Repairs.size() + 1;
 		this.status = Status;	
+		this.ListOfRepairTasks = aRepairFolder.getRepairTaskCatalog();
 		Registry.Repairs.add(this);
 	}
 	
@@ -28,6 +30,23 @@ public class Repair {
 	public void ClaimRepair(SupervisorEngineer aSuperEng) {
 		status = "claimed";
 		this.aSupervisorEngineer=aSuperEng;
+	}
+	
+
+	public ArrayList<TaskAssignment> getListOfAssignments() {
+		return ListOfAssignments;
+	}
+
+	public void setListOfAssignments(ArrayList<TaskAssignment> listOfAssignments) {
+		ListOfAssignments = listOfAssignments;
+	}
+
+	public ArrayList<RepairTask> getListOfRepairTasks() {
+		return ListOfRepairTasks;
+	}
+
+	public void setListOfRepairTasks(ArrayList<RepairTask> listOfRepairTasks) {
+		ListOfRepairTasks = listOfRepairTasks;
 	}
 
 	public int getRepairid() {

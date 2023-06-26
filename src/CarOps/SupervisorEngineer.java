@@ -37,10 +37,15 @@ public class SupervisorEngineer extends Engineer {
 		
 	}
 	
-	private void AssignRepairTask(Engineer anEngineer,RepairTask aRepairTask) {
-		anEngineer.setAvailable(false);
+	private void AssignRepairTask(Engineer anEngineer,RepairTask aRepairTask,Repair aRepair) {
+		
 		TaskAssignment anAssignment=new TaskAssignment(anEngineer,aRepairTask);
+		aRepair.getListOfAssignments().add(anAssignment);
 		anEngineer.setAvailable(false);
+	}
+	private void ChangeAssignment(Engineer anEngineer,TaskAssignment anAssignment) {
+		anAssignment.setAnEngineer(anEngineer);
+		
 	}
 
 	public Registry getaRegistry() {

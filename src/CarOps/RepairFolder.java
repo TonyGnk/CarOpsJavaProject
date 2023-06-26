@@ -14,6 +14,15 @@ public class RepairFolder {
 
 	private ArrayList<RepairTask> RepairTaskCatalog = new ArrayList<RepairTask>();
 	
+	//Έγκριση του φακέλου επισκευής απο την γραμματεία και δημιουργία επικευής που αντιστοιχεί στον φάκελο
+	public void setStatus(String status) {
+		this.status = status;
+		if(status.toLowerCase()=="approved"){
+			Repair newRepair=new Repair(this,"wait");
+			
+		}
+	}
+	
     //Second Constructor for use in the HostEngineer Class
 	//Με τη χρήση αυτού του Constructor δημιουργείται ένας φάκελος που εκκρεμεί(stats="Pending") και για να αλλάξει πρέπει να εγκριθεί από την Γραμματεία
 	public RepairFolder(Session aSession,int estTime,int totalCost,ArrayList<Task> aListOfTasks){
@@ -43,14 +52,7 @@ public class RepairFolder {
 		}
 	//}
 	
-	//Έγκριση του φακέλου επισκευής απο την γραμματεία και δημιουργία επικευής που αντιστοιχεί στον φάκελο
-	public void setStatus(String status) {
-		this.status = status;
-		if(status.toLowerCase()=="approved"){
-			Repair newRepair=new Repair(this,"wait");
-			
-		}
-	}
+
 	
 	public void addRepairTask(RepairTask aRepairTask) {
 		RepairTaskCatalog.add(aRepairTask);
