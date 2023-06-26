@@ -24,4 +24,29 @@ public class SparePart {
 		return Name;
 	}
 
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public int getCostPerPiece() {
+		return CostPerPiece;
+	}
+
+	public void setCostPerPiece(int costPerPiece) {
+		CostPerPiece = costPerPiece;
+	}
+
+	public int getTotalPieces() {
+		return TotalPieces;
+	}
+
+	public void setTotalPieces(int totalPieces) {
+		TotalPieces = totalPieces;
+	}
+	
+
 }

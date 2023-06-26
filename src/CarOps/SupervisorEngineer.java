@@ -24,10 +24,10 @@ public class SupervisorEngineer extends Engineer {
 		
 	}
 	
-	private void ShowAllAvailableRepairs() {
+	private void ShowAllWaitRepairs() {
 		
-		for(int i=0;i<aRegistry.GetAvailabeRepairs().size();i++) {
-			aRegistry.GetAvailabeRepairs().get(i).printDetails();
+		for(int i=0;i<aRegistry.GetWaitRepairs().size();i++) {
+			aRegistry.GetWaitRepairs().get(i).printDetails();
 			
 		}
 	}

@@ -6,7 +6,8 @@ public class AssignmentSparePart {
     private TaskAssignment aTaskAssignment;
 	private int TaskQuantity;
 	
-	public AssignmentSparePart(SparePart aSparePart,int Quantity) {
+	public AssignmentSparePart(TaskAssignment aTaskAssigment,SparePart aSparePart,int Quantity) {
+		this.aTaskAssignment=aTaskAssignment;
 		this.TaskQuantity = Quantity;
 		this.aSparePart=aSparePart;
 	}

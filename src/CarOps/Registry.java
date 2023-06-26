@@ -31,13 +31,13 @@ public class Registry {
 		
 	}
 	
-	public ArrayList<Repair> GetAvailabeRepairs() {
+	public ArrayList<Repair> GetWaitRepairs() {
 		
 		ArrayList<Repair> TempRepairs = new ArrayList<Repair>();
 		
 		for(Repair aRepair : Repairs) {
 			
-			if(aRepair.getStatus().toLowerCase().equals("available")) 
+			if(aRepair.getStatus().toLowerCase().equals("wait")) 
 				TempRepairs.add(aRepair);
 		}
 		return TempRepairs;

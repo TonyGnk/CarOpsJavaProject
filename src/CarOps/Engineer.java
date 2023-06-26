@@ -1,5 +1,7 @@
 package CarOps;
 
+import java.util.ArrayList;
+
 public class Engineer extends SystemUser {
 
 	private int EngineerID;
@@ -9,12 +11,19 @@ public class Engineer extends SystemUser {
 	
 	
 	//Ολοκλήρωση Ανάθεσης απο τον Μηχανικό
-	public void FinishAssignment(TaskAssignment anAssignment) {
+	public void FinishAssignment(TaskAssignment anAssignment,ArrayList<AssignmentSparePart> ListOfParts) {
 		this.Available=true;
 		anAssignment.setFinished(true);
 		anAssignment.getaRepairTask().setStatus("finished");
 		
+		
 	};
+	
+	//Ο Μηχανικός μπορεί να προσθέτει τα εξαρτήματα που χρησιμοποίησε και την ποσότητα τους κατά την διάρκεια της ανάθεσης
+	public void AddSparePartToAssignment(TaskAssignment anAssignment,SparePart aPart,int Quantity) {
+		anAssignment.getAssignmentSparePartCatalog().add(new AssignmentSparePart(anAssignment,aPart,Quantity));
+		
+	}
 	
 	//Προβολή της ανάθεσης από τον Μηχανικό
 	public void PrintAssignment() {

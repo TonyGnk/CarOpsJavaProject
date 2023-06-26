@@ -47,7 +47,7 @@ public class RepairFolder {
 	public void setStatus(String status) {
 		this.status = status;
 		if(status.toLowerCase()=="approved"){
-			Repair newRepair=new Repair(this,"available");
+			Repair newRepair=new Repair(this,"wait");
 			
 		}
 	}
