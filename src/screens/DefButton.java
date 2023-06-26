@@ -8,7 +8,9 @@ import javafx.scene.control.Button;
 public class DefButton extends Button{
     private Timeline timeline; 
     public DefButton(String text) {
-        super(text);
+        super(text);       
+        
+        
         this.setOnMouseEntered(e -> {
             timeline = new Timeline();
             int i = 60;

@@ -13,3 +13,19 @@
 .def-button:hover {
     -fx-background-color: rgb(30, 30, 30);
 }
+
+.my-table {
+    -fx-background-color: #000000;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.my-table .table-row-cell:filled:selected, .my-table .table-row-cell:filled:hover {
+    -fx-background: #bfbfbf;
+}
+
+.my-table .column-header {
+    -fx-background-color: #808080;
+    -fx-text-fill: white;
+}
+

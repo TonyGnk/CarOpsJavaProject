@@ -18,19 +18,19 @@ public class DefButtonHome extends Button {
             DefScreen userscreen;
 
             if (type.equals("Sec")) {
-                userscreen = new UserSecretaryHome(stage);
+                //userscreen = new UserSecretaryHome(stage);
             } else if (type.equals("Own")) {
-                userscreen = new UserOwnerHome(stage);
+                //userscreen = new UserOwnerHome(stage);
             } else if (type.equals("Hos")) {
-                userscreen = new UserHostMechanicHome(stage);
+                //userscreen = new UserHostMechanicHome(stage);
             } else if (type.equals("Mec")) {
-                userscreen = new UserMechanicHome(stage);
+                //userscreen = new UserMechanicHome(stage);
             } else {
-                userscreen = new UserSupervisorHome(stage);
+                //userscreen = new UserSupervisorHome(stage);
             }
             
-            userscreen.setStyle(Main.backgroundColor);
-            stage.setScene(new Scene(userscreen, Main.i, Main.j));
+            //userscreen.setStyle(Main.backgroundColor);
+            //stage.setScene(new Scene(userscreen, Main.i, Main.j));
         });
         
         this.setPrefSize(Main.ii, Main.jj);
@@ -87,19 +87,19 @@ public class DefButtonHome extends Button {
             DefScreen userscreen;
 
             if (type.equals("Sec")) {
-                userscreen = new UserSecretaryHome(stage);
+                //userscreen = new UserSecretaryHome(stage);
             } else if (type.equals("Own")) {
-                userscreen = new UserOwnerHome(stage);
+                //userscreen = new UserOwnerHome(stage);
             } else if (type.equals("Hos")) {
-                userscreen = new UserHostMechanicHome(stage);
+                //userscreen = new UserHostMechanicHome(stage);
             } else if (type.equals("Mec")) {
-                userscreen = new UserMechanicHome(stage);
+                //userscreen = new UserMechanicHome(stage);
             } else {
-                userscreen = new UserSupervisorHome(stage);
+                //userscreen = new UserSupervisorHome(stage);
             }
             
-            userscreen.setStyle(Main.backgroundColor);
-            stage.setScene(new Scene(userscreen, Main.i, Main.j));
+            //userscreen.setStyle(Main.backgroundColor);
+            //stage.setScene(new Scene(userscreen, Main.i, Main.j));
         });
         
         this.setPrefSize(Main.ii, Main.jj);

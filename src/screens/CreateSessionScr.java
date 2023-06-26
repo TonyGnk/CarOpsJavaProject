@@ -1,4 +1,6 @@
 package screens;
+import java.io.FileNotFoundException;
+
 import CarOps.*;
 
 import javafx.geometry.Pos;
@@ -7,12 +9,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class EditSessionScr extends UserSecretaryScr {
+public class CreateSessionScr extends DefScreen {
     TextField nameField, plateField, dateField;
     Button submitButton;
 
-    public EditSessionScr(Stage primaryStage) {
-        super(primaryStage);
+    public CreateSessionScr(Stage primaryStage,String Label) throws FileNotFoundException {
+        super(primaryStage,Label);
 
         VBox form = new VBox(10);
         form.setAlignment(Pos.CENTER);

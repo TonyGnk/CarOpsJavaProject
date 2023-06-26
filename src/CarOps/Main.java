@@ -8,10 +8,10 @@ public class Main extends Application {
 	
     public static Registry registry; //Global Registry
     //Window Size
-    public static int i=1100; //1100
-    public static int j=650; //650
-    public static int ii=110; //1100
-    public static int jj=35; //650
+    public static int i=1100; //1100 - Vertical Size
+    public static int j=650; //650 - Horizontal Size
+    public static int ii=110; //110
+    public static int jj=35; //35
     public static String backgroundColor = "-fx-background-color: rgb(35, 35, 35);";
     public static String backgroundSecColor = "-fx-background-color: rgb(60, 60, 60);";
     public static String backgroundThirdColor = "-fx-background-color: rgb(75, 75, 75);";

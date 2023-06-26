@@ -7,12 +7,13 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 
 public class DefButtonStart extends Button {
 	private Timeline timeline;
-    public DefButtonStart(String username, DefScreen userScreen) {
+    public DefButtonStart(DefScreen userScreen,String username) {
         super(username);
 
         this.setOnAction(e -> {
