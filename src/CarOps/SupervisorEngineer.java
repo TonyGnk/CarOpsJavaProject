@@ -33,7 +33,23 @@ public class SupervisorEngineer extends Engineer {
 	}
 	
 	private void ClaimRepair(Repair aRepair) {
-		aRepair.ClaimRepair(this);
+		 aRepair.ClaimRepair(this);
+		
+		
+	}
+	// Ο Επιβλέπων Μηχανικός μπορεί να ολοκληρώσει την επισκευή μόνο αν έχουν γίνει όλες οι εργασίες(RepairTasks) που την απαρτίζουν
+	private void CompleteRepair(Repair aRepair) {
+		boolean RepairTasksFinished=true;
+		for(RepairTask task :aRepair.getListOfRepairTasks()) {
+			if (!(task.getStatus().equals("finished"))) RepairTasksFinished=false;
+			
+		}
+	    if(RepairTasksFinished==true) {
+	    	
+	    	 aRepair.CompleteRepair();
+	    	 System.out.println("Repair Completed Succesfully");
+	    }
+	    else  System.out.println("Repair can't be complete because there are RepairTask that are Unfinished");
 		
 	}
 	

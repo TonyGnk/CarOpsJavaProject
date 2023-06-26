@@ -77,7 +77,7 @@ public class Repair {
 		status = "dropped";
 	}
 
-	public void CompleteRepair(int SupervisorID) {
+	public void CompleteRepair() {
 		status = "completed";
 	}
 
