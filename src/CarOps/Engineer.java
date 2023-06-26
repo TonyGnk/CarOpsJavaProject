@@ -32,6 +32,7 @@ public class Engineer extends SystemUser {
 		totalEngineers+=1;
 		this.EngineerID=totalEngineers;
 		this.Available=true;
+		Registry.Engineers.add(this);
 	}
 	public int getEngineerID() {
 		return EngineerID;

@@ -11,7 +11,6 @@ public class TaskAssignment  {
 	private int time;
 	ArrayList<AssignmentSparePart> AssignmentSparePartCatalog = new ArrayList<AssignmentSparePart>(); //The catalog that contains only the spare parts for this task assignment
 	Registry registry;
-	public static int TaskAssignmentscount=0;
 	
 
 	
@@ -33,11 +32,11 @@ public class TaskAssignment  {
 	
 	
 	public TaskAssignment(Engineer anEngineer,RepairTask aRepairTask) {
-		this.TaskAssignmentID = this.TaskAssignmentscount + 1; 
-		this.TaskAssignmentscount+=1;
+		this.TaskAssignmentID = Registry.TaskAssignments.size() + 1; 
 		this.aRepairTask = aRepairTask;
 		this.anEngineer=anEngineer;
 		this.finished=false;
+		Registry.TaskAssignments.add(this);
 	}
 	
 	public void finished(int time,ArrayList<AssignmentSparePart> ListOfParts) {

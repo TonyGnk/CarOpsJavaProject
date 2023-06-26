@@ -31,19 +31,19 @@ public class HostEngineer extends Engineer {
 	
 	public void CreateNewCar(String plate, String brand, String model, int productionYear) {
 		Car newCar =new Car(plate,brand,model,productionYear) ;
-		aRegistry.Vehicles.add(newCar);	
+	
 		
 	}
 	
 	public void CreateNewBicycle(String plate, String brand, String model, int productionYear,int cubism) {
 		Bicycle newBicycle =new Bicycle(plate,brand,model,productionYear,cubism) ;
-		aRegistry.Vehicles.add(newBicycle);	
+		
 		
 	}
 	
 	public void CreateNewTruck(String plate, String brand, String model, int productionYear,int useFullLoad) {
 		Truck newTruck =new Truck(plate,brand,model,productionYear,useFullLoad) ;
-		aRegistry.Vehicles.add(newTruck);	
+		
 		
 	}
 	

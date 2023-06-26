@@ -9,12 +9,14 @@ public class Repair {
 	private String status;
 	private Registry registry;
 	private SupervisorEngineer aSupervisorEngineer;
+	private ArrayList<TaskAssignment> ListOfAssignments=new ArrayList<TaskAssignment>();
 
 
 	public Repair(RepairFolder aRepairFolder,String Status) {
 		this.aRepairFolder=aRepairFolder;
 		this.Repairid = registry.Repairs.size() + 1;
-		this.status = Status;		
+		this.status = Status;	
+		Registry.Repairs.add(this);
 	}
 	
 	public void printDetails() {

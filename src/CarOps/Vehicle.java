@@ -21,6 +21,7 @@ public class Vehicle {
 		this.brand = brand;
 		this.model = model;
 		this.prodYear = prodYear;
+		Registry.Vehicles.add(this);
 	}
 
 	public String getPlate() {
