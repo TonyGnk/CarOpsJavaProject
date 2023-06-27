@@ -73,7 +73,7 @@ public class DefScreenInput<T extends Client> extends DefScreen {
                 field.set(object, inputFields[i].getText());
             }
 
-            Main.registry.AddNewItem(object);
+            //Main.registry.AddNewItem(object);
         } catch (Exception e) {
             e.printStackTrace();
         }
