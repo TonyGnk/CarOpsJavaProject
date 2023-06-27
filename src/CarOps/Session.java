@@ -9,12 +9,12 @@ public class Session {
     private String plate;
 
     
-    public Session(String name, String date, String plate,int size) {
+    public Session(String name, String date, String plate) {
         this.name = name;
         this.date = date;
         this.plate = plate;
-        this.sessionID = size;
-		Registry.Sessions.add(this);      
+        this.sessionID = Registry.Sessions.size()+1;
+		Registry.Sessions.add(this);     
     }
     
     public String getName() {

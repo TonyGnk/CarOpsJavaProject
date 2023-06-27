@@ -9,7 +9,6 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
@@ -102,6 +101,10 @@ public class DefScreen<T> extends VBox {
     }
     
     protected void addButtonToGroup(HBox button) {
+    	allContentBox.setMargin(button, new Insets(5,0,0,0));
+    	allContentBox.getChildren().addAll(connectAsLabel,button,contentBox);
+    }
+    protected void addButtonToGroup(VBox button) {
     	allContentBox.setMargin(button, new Insets(5,0,0,0));
     	allContentBox.getChildren().addAll(connectAsLabel,button,contentBox);
     }

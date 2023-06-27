@@ -1,14 +1,9 @@
 package screens;
 
-import CarOps.Main;
-import CarOps.Session;
+import CarOps.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -78,9 +73,15 @@ public class DefScreenData<T> extends DefScreen {
         
         allContentBox.getChildren().removeAll();
         addButtonToGroup(tableBox);
+
         
-        DefScreen input = new DefScreen(primaryStage,"D");
+        DefScreen input = new DefScreen(primaryStage,"Δημιουργία");
         //addGroupToGroup(inputFieldsBox);
+        DefButtonOption button = new DefButtonOption(input,"Δημιουργία");
+        input.clearGroup();
+        input.addButtonToGroup(inputFieldsBox);
+        
+        addButtonToGroup(button);	
     }
 
     public DefScreenInput addButtonInScrData(Stage primaryStage, String string,List<T> data) throws FileNotFoundException {

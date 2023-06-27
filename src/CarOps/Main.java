@@ -23,7 +23,10 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         registry = new Registry(); //New Registry
-
+        Session s1 = new Session("Παράδειγμα", "03/07/23", "ZMP-4931");
+        Client s2 = new Client("Γιάννης", "Γαβριηλίδης",231043110, "Βενιζέλου 23, Θεσσαλονίκη", "John@gmail.com");
+        Vehicle s3 = new Vehicle("ZMP-4931","Toyota","Yaris", 2011);
+        
         //Start Screen
         StartScr startScr = new StartScr(primaryStage);
         Scene scene = new Scene(startScr, i, j);

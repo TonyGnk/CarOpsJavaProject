@@ -12,13 +12,12 @@ public class StartScr extends DefStartScreen {
         super(primaryStage);
         
         //Γραμματεία
-        Session s = new Session("Παράδειγμα", "Παραδείγματος", "Παράδειγμα", 3);
+        
         DefScreen gramateia = addButtonInScrFirst(primaryStage,"Γραμματεία");
         	DefScreenData rantevou = gramateia.addButtonInScr(primaryStage,this,"Ραντεβού",Main.registry.Sessions);
         		//DefScreenInput newrantevou = rantevou.addButtonInScrData(primaryStage,"Νέο Ραντεβού",Main.registry.Sessions);
         	DefScreenData pelates = gramateia.addButtonInScr(primaryStage,this,"Πελάτες",Main.registry.Clients);	
-        	DefScreenData oximata = gramateia.addButtonInScr(primaryStage,this,"Οχήματα",Main.registry.Vehicles);	
-        
+        	DefScreenData oximata = gramateia.addButtonInScr(primaryStage,this,"Οχήματα",Main.registry.Vehicles);	     
         	
         //Ιδιοκτήτης	
         DefScreen owner = addButtonInScrFirst(primaryStage,"Ιδιοκτήτης");

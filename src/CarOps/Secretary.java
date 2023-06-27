@@ -26,10 +26,7 @@ public class Secretary extends SystemUser {
 			aRegistry.RepairFolders.get(i).PrintDetails();		
 		}
 	}
-	public void CreateSession(String name,String Date,String Plate) {
-		
-		Session newSession=new Session(name,Date,Plate,Registry.Sessions.size()+1);
-	}
+
 	
    public void RemoveSession(Session aSession) {
 		

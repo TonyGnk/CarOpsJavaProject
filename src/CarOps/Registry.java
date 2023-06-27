@@ -138,7 +138,7 @@ public class Registry {
     //public ArrayList<Session> getSessions() { return Sessions; }
     //public void setSessions(ArrayList<Session> sessions) { Sessions = sessions; }
 	
-    public void addNewItem(String name, String date, String plate) { Sessions.add(new Session(name, date, plate, Sessions.size())); }
+ 
 
 	
 	public ArrayList<SparePart> getSpareParts() { return SpareParts; }

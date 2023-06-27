@@ -15,8 +15,7 @@ public class Vehicle {
 		System.out.println("Production Year: " +prodYear);
 	}
 	
-	public Vehicle(String plate, String brand, String model, int prodYear) {
-		
+	public Vehicle(String plate, String brand, String model, int prodYear) {	
 		this.plate = plate;
 		this.brand = brand;
 		this.model = model;
@@ -27,5 +26,17 @@ public class Vehicle {
 	public String getPlate() {
 		return plate;
 	}
+	
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getProdYear() {
+        return prodYear;
+    }
 
 }
