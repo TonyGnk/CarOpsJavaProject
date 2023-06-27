@@ -40,7 +40,11 @@ public class DefScreen<T> extends VBox {
         // Create a container for the buttons
         allContentBox = new VBox();
         allContentBox.setAlignment(Pos.TOP_CENTER);
-        allContentBox.setStyle(Main.backgroundColor2+"-fx-border-width: 3px;"+"-fx-border-radius: 10px; -fx-background-radius:10px; -fx-border-color: rgb(207, 216, 220);");
+        //allContentBox.setStyle(Main.backgroundColor2+"-fx-border-width: 3px;"+"-fx-border-radius: 10px; -fx-background-radius:10px; -fx-border-color: rgb(207, 216, 220);");
+        
+        allContentBox.setStyle(Main.backgroundColor2+"-fx-border-width: 3px;"+"-fx-border-radius: 10px; -fx-background-radius:10px; -fx-border-color: rgb(176, 190, 197);");
+
+        
         allContentBox.setPadding(new Insets(10));
         VBox.setVgrow(allContentBox, Priority.ALWAYS);
         

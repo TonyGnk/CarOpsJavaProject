@@ -36,8 +36,7 @@ public class StartScr extends DefStartScreen {
         
         //Μηχανικός	
         DefScreen mechanic = addButtonInScrFirst(primaryStage,"Μηχανικός");
-        	DefScreenData probolianatheseon = mechanic.addButtonInScr(primaryStage,this,"Προβολή Αναθέσεων",Main.registry.TaskAssignments);//Επίσης	
-        
+        	DefScreenData probolianatheseon = mechanic.addButtonInScr(primaryStage,this,"Προβολή Αναθέσεων",Main.registry.TaskAssignments);//Επίσης	      
     }
     
     public DefScreen addButtonInScrFirst(Stage primaryStage, String string) throws FileNotFoundException {

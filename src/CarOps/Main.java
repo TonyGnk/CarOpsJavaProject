@@ -33,8 +33,7 @@ public class Main extends Application {
         //TaskAssignment s5 = new TaskAssignment("Γιώργος", RepairTask aRepairTask) {
         
         //RepairFolder s5 = new RepairFolder(s1,1930,1000,ArrayList<Task> aListOfTasks){
-        
-        
+              
         //Start Screen
         StartScr startScr = new StartScr(primaryStage);
         Scene scene = new Scene(startScr, i, j);
@@ -45,8 +44,7 @@ public class Main extends Application {
         primaryStage.setTitle("CarOps");
         primaryStage.setScene(scene);
         Platform.setImplicitExit(false);
-        primaryStage.show();
-         
+        primaryStage.show();        
     }
 
     public static void main(String[] args) {
