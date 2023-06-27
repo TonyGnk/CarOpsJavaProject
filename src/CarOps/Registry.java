@@ -110,21 +110,17 @@ public class Registry {
 	
 	public ArrayList<Client> getClients() { return Clients; }
 	public void setClients(ArrayList<Client> clients) { Clients = clients; }
-	public void AddNewItem(Client aClient) { Clients.add(aClient); }
 
 	
 	public ArrayList<Engineer> getEngineers() { return Engineers; }
 	public void setEngineers(ArrayList<Engineer> engineers) { Engineers = engineers; }
-	public void AddNewItem(Engineer anEngineer) { Engineers.add(anEngineer); }
 
 	
 	public ArrayList<Repair> getRepairs() { return Repairs; }
 	public void setRepairs(ArrayList<Repair> repairs) { Repairs = repairs; }
-	public void AddNewItem(Repair aRepair) { Repairs.add(aRepair); }
 	
 	public ArrayList<RepairFolder> getRepairFolders() { return RepairFolders;}
 	public void setRepairFolders(ArrayList<RepairFolder> repairFolders) {RepairFolders = repairFolders;}
-	public void AddNewItem(RepairFolder aRepairFolder) { RepairFolders.add(aRepairFolder); }
 
 	
 	/*
@@ -137,7 +133,6 @@ public class Registry {
 	
 	public ArrayList<Report> getReports() { return Reports; }
 	public void setReports(ArrayList<Report> reports) { Reports = reports; }
-	public void AddNewItem(Report aReport) { Reports.add(aReport); }
 
 	
     //public ArrayList<Session> getSessions() { return Sessions; }
@@ -148,7 +143,6 @@ public class Registry {
 	
 	public ArrayList<SparePart> getSpareParts() { return SpareParts; }
 	public void setSpareParts(ArrayList<SparePart> spareParts) { SpareParts = spareParts; }
-	public void AddNewItem(SparePart aSparePart) { SpareParts.add(aSparePart); }
 	
 	//public ArrayList<TaskAssignment> getTaskAssignments() { return TaskAssignments; }
 	//public void setTaskAssignments(ArrayList<TaskAssignment> taskAssignments) { TaskAssignments = taskAssignments;}
@@ -156,9 +150,7 @@ public class Registry {
 	
 	public ArrayList<Task> getTasks() { return Tasks; }
 	public void setTasks(ArrayList<Task> tasks) { Tasks = tasks; }
-	public void AddNewItem(Task aTask) { Tasks.add(aTask); }
 
 	public ArrayList<Vehicle> getVehicles() { return Vehicles; }
 	public void setVehicles(ArrayList<Vehicle> vehicles) { Vehicles = vehicles; }
-	public void AddNewItem(Vehicle aVehicle) { Vehicles.add(aVehicle); }
 }

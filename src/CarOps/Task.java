@@ -23,16 +23,6 @@ public class Task {
 		Registry.Tasks.add(this);
 	}
 
-
-
-	public void UpdateTask(Task aTask ) {
-		// TODO - implement Task.UpdatTask
-		throw new UnsupportedOperationException();
-	}
-
-
-
-	
 	public void PrintDetails() {
 		System.out.println("Name: "+ Name);
 		System.out.println("Cost "+ Cost);
