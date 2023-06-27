@@ -30,8 +30,8 @@ public class StartScr extends DefStartScreen {
         	
         //Επιβλέπων	
         DefScreen supmechanic = addButtonInScrFirst(primaryStage,"Επιβλέπων Μηχανικός");
-        	DefScreenData Antalaktika = supmechanic.addButtonInScr(primaryStage,this,"Ανταλλακτικά",Main.registry.RepairFolders);//Δεν είμαι σίγουρος, Νίκο έλεγξε το αν είναι το σωστό arraylist
-        	DefScreenData diaxeirisiep = supmechanic.addButtonInScr(primaryStage,this,"Διαχείριση Επισκευών",Main.registry.Repairs);//Επίσης
+        	DefScreenData Antalaktika = supmechanic.addButtonInScr(primaryStage,this,"Ανταλλακτικά",Main.registry.SpareParts);
+        	DefScreenData diaxeirisiep = supmechanic.addButtonInScr(primaryStage,this,"Διαχείριση Επισκευών",Main.registry.Repairs);
         
         
         //Μηχανικός	
