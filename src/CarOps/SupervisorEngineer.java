@@ -18,17 +18,14 @@ public class SupervisorEngineer extends Engineer {
         if(!(ListOfRepairs==null)) {
 		 for(int i=0;i<ListOfRepairs.size();i++) {
 			 ListOfRepairs.get(i).printDetails();
-			
 		 }
         }
-		
+		else System.out.println("You don't have any Repairs");		
 	}
 	
-	private void ShowAllWaitRepairs() {
-		
+	private void ShowAllWaitRepairs() {		
 		for(int i=0;i<aRegistry.GetWaitRepairs().size();i++) {
-			aRegistry.GetWaitRepairs().get(i).printDetails();
-			
+			aRegistry.GetWaitRepairs().get(i).printDetails();		
 		}
 	}
 	

@@ -9,11 +9,9 @@ public class Report {
 	 * 
 	 * @param Type
 	 */
-    public Report() {
-    	
+    public Report() {   	
     	this.ReportID=Registry.Reports.size()+1;
-    	Registry.Reports.add(this);
-    	
+    	Registry.Reports.add(this);   	
     }
 	
 	

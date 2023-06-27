@@ -30,7 +30,7 @@ public class DefButtonQuit extends Button {
 
         this.setPrefSize(Main.ii, Main.jj);
         this.setTextFill(Color.web(Main.textcolour));
-        this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");
+        this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 15;");
 
         this.setOnMouseEntered(e -> {
             timeline = new Timeline();

@@ -11,7 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 
-public class DefButtonStart extends Button {
+public class DefButtonStart extends DefButton {
 	private Timeline timeline;
     public DefButtonStart(DefScreen userScreen,String username) {
         super(username);
@@ -23,9 +23,8 @@ public class DefButtonStart extends Button {
         });
 
         this.setPrefSize(150, 150);
-        this.setTextFill(Color.web(Main.textcolour));
-        this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");
-
+        //this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");
+/*
         this.setOnMouseEntered(e -> {
             timeline = new Timeline();
             int i = 60;
@@ -56,6 +55,6 @@ public class DefButtonStart extends Button {
             }
             timeline.play();
         });
-
+*/
     }
 }

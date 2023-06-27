@@ -8,19 +8,22 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class DefScreen extends VBox {
     protected VBox allContentBox;
+    protected HBox contentBoxLarge;
     protected HBox contentBox;
-    protected HBox closeButtonBox;
+    protected Label connectAsLabel;
 
     public DefScreen(Stage primaryStage,String Label) throws FileNotFoundException {
         super();
         
-        Label connectAsLabel = new DefTextHeader(Label);
+        connectAsLabel = new DefTextHeader(Label);
        
         DefButtonOption backButton = new DefButtonOption("Έξοδος");                  
         backButton.setOnAction(e -> {
@@ -33,32 +36,45 @@ public class DefScreen extends VBox {
 			}
         });      
         
-        DefButtonOption closeButton = new DefButtonOption("Κλείσιμο");
-        closeButton.setOnAction(e -> primaryStage.close());
         
         // Create a container for the buttons
         allContentBox = new VBox();
-        allContentBox.setAlignment(Pos.CENTER);
-        allContentBox.setMargin(connectAsLabel, new Insets(40));
-        allContentBox.setSpacing(80);
+        allContentBox.setAlignment(Pos.TOP_CENTER);
+        allContentBox.setStyle(Main.backgroundColor2+"-fx-border-width: 3px;"+"-fx-border-radius: 10px; -fx-background-radius:10px; -fx-border-color: rgb(176, 190, 197);");
         allContentBox.setPadding(new Insets(10));
+        VBox.setVgrow(allContentBox, Priority.ALWAYS);
+        
+        //allContentBox.setSpacing(80);
+        //allContentBox.setPadding(new Insets(10));
 
         // Create a container for the buttons
         contentBox = new HBox();
         contentBox.setAlignment(Pos.CENTER);
         contentBox.setSpacing(10);
-        contentBox.setPadding(new Insets(10));                   
-
-        // Create an HBox for the close button and center it
-        closeButtonBox = new HBox();
-        closeButtonBox.setSpacing(10);
-        closeButtonBox.setPadding(new Insets(10)); 
-        closeButtonBox.setAlignment(Pos.CENTER);
-      
+        //contentBox.setPadding(new Insets(0,0,40,0)); 
+        //contentBox.setPadding(new Insets(10)); 
         
-        closeButtonBox.getChildren().addAll(backButton, closeButton);
-        allContentBox.getChildren().addAll(connectAsLabel, contentBox,closeButtonBox);
-
+        // Create a container for the buttons
+        contentBoxLarge = new HBox();
+        contentBoxLarge.setAlignment(Pos.CENTER);
+        //contentBoxLarge.setPadding(new Insets(70,0,0,0)); 
+        
+        // Create an HBox for the close button and center it   
+         
+    	
+    	
+    	//allContentBox.setSpacing(80);
+        allContentBox.setMargin(connectAsLabel, new Insets(40,0,00,0));
+        allContentBox.setMargin(contentBoxLarge, new Insets(90,0,90,0));
+        allContentBox.setMargin(contentBox, new Insets(5,0,0,0));
+    	connectAsLabel.setPadding(new Insets(0,10,0,10));
+    	contentBoxLarge.setPadding(new Insets(10));
+    	contentBox.setPadding(new Insets(10));
+        
+        contentBox.getChildren().addAll(backButton);
+        allContentBox.getChildren().addAll(connectAsLabel,contentBoxLarge,contentBox);
+        
+        VBox.setMargin(allContentBox, new Insets(6));
         getChildren().addAll(allContentBox);
     }
    
@@ -68,10 +84,18 @@ public class DefScreen extends VBox {
     }
     
     protected void addButtonToGroup(DefButtonStart button) {
-    	contentBox.getChildren().add(button);
+    	contentBoxLarge.getChildren().add(button);
     }
     
     protected void addButtonToGroup(DefButtonOption button) {
     	contentBox.getChildren().add(button);
+    }
+    protected void clearGroup() {
+    	allContentBox.getChildren().clear();
+    }
+    
+    protected void addButtonToGroup(HBox button) {
+    	allContentBox.setMargin(button, new Insets(5,0,0,0));
+    	allContentBox.getChildren().addAll(connectAsLabel,button,contentBox);
     }
 }

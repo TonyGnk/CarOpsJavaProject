@@ -18,7 +18,7 @@ public class StartScr extends DefStartScreen {
         //DefScreen mhhanikosEpilep = new UserSupervisorHome(primaryStage);
 		
         // Create buttons for each user type
-        Button gramateiaButton = new DefButtonStart(gramateia,"Γραμματεία");
+        DefButtonStart gramateiaButton = new DefButtonStart(gramateia,"Γραμματεία");
         //Button idioktitisButton = new DefButtonStart("Ιδιοκτήτης", idioktitis);
         //Button mhhanikosYpodButton = new DefButtonStart("Μηχανικός Υποδοχής", mhhanikosYpod);
         //Button mhhanikosButton = new DefButtonStart("Μηχανικός", mhhanikos);

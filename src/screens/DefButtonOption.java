@@ -23,8 +23,8 @@ public class DefButtonOption extends DefButton {
         });
 
         this.setPrefSize(Main.ii, Main.jj);
-        this.setTextFill(Color.web(Main.textcolour));
-        this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");
+        
+        //this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");
     }
 	//__________________________________________________________________________
 	
@@ -39,8 +39,7 @@ public class DefButtonOption extends DefButton {
         });
 
         this.setPrefSize(Main.ii, Main.jj);
-        this.setTextFill(Color.web(Main.textcolour));
-        this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");
+        //this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");
     }
 	//___________________________________________________________________________
 	public DefButtonOption(String username) {
@@ -50,7 +49,6 @@ public class DefButtonOption extends DefButton {
         
 
         this.setPrefSize(Main.ii, Main.jj);
-        this.setTextFill(Color.web(Main.textcolour));
-        this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");
+        //this.setStyle(Main.backgroundSecColor+"-fx-background-radius: 10;");
     }
 }

@@ -13,9 +13,7 @@ public class Session {
         this.name = name;
         this.date = date;
         this.plate = plate;
-        this.sessionID = size;
-        
-        
+        this.sessionID = size;      
     }
     
     public String getName() {

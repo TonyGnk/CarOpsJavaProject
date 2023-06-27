@@ -10,7 +10,7 @@ public class TaskAssignment  {
 	private int TaskAssignmentID;
 	private int time;
 	ArrayList<AssignmentSparePart> AssignmentSparePartCatalog = new ArrayList<AssignmentSparePart>(); //The catalog that contains only the spare parts for this task assignment
-	Registry registry;
+	//Registry registry;
 	
 
 	
@@ -61,12 +61,12 @@ public class TaskAssignment  {
 		this.time = time;
 	}
 
-	public Registry getRegistry() {
-		return registry;
-	}
+	//public Registry getRegistry() { Σφάλμα που εμπόδιζε εκτέλεση
+		//Main.registry;
+	//}
 
 	public void setRegistry(Registry registry) {
-		this.registry = registry;
+		Main.registry = registry;
 	}
 
 	public void SetTime(int time) {

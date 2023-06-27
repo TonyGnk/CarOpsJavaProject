@@ -16,16 +16,14 @@ public class Secretary extends SystemUser {
 	
 	public void ShowAllSessions() {
 		for(int i=0;i<aRegistry.Sessions.size(); i++) {
-			aRegistry.Sessions.get(i).PrintDetails();
-			
+			aRegistry.Sessions.get(i).PrintDetails();		
 		}
 		
 	}
 	
 	public void ShowAllRepairFolders(){
 		for(int i=0;i<aRegistry.RepairFolders.size(); i++) {
-			aRegistry.RepairFolders.get(i).PrintDetails();
-			
+			aRegistry.RepairFolders.get(i).PrintDetails();		
 		}
 	}
 	//Έγκριση του φακέλου επισκευής απο την γραμματεία και μετατροπή σε επικευή

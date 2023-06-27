@@ -2,7 +2,6 @@ package CarOps;
 
 import java.util.ArrayList;
 
-
 public class Registry {
 	
 	//ArrayList<AssignmentSparePart> AssignmentSpareParts = new ArrayList<AssignmentSparePart>();
@@ -150,9 +149,9 @@ public class Registry {
 	public void setSpareParts(ArrayList<SparePart> spareParts) { SpareParts = spareParts; }
 	public void AddNewItem(SparePart aSparePart) { SpareParts.add(aSparePart); }
 	
-	public ArrayList<TaskAssignment> getTaskAssignments() { return TaskAssignments; }
-	public void setTaskAssignments(ArrayList<TaskAssignment> taskAssignments) { TaskAssignments = taskAssignments;}
-	public void AddNewItem(TaskAssignment aTaskAssigment) { TaskAssignments.add(aTaskAssigment); }
+	//public ArrayList<TaskAssignment> getTaskAssignments() { return TaskAssignments; }
+	//public void setTaskAssignments(ArrayList<TaskAssignment> taskAssignments) { TaskAssignments = taskAssignments;}
+	//public void AddNewItem(TaskAssignment aTaskAssigment) { TaskAssignments.add(aTaskAssigment); }
 	
 	public ArrayList<Task> getTasks() { return Tasks; }
 	public void setTasks(ArrayList<Task> tasks) { Tasks = tasks; }

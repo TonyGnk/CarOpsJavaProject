@@ -12,10 +12,12 @@ public class Main extends Application {
     public static int j=650; //650 - Horizontal Size
     public static int ii=110; //110
     public static int jj=35; //35
-    public static String backgroundColor = "-fx-background-color: rgb(35, 35, 35);";
-    public static String backgroundSecColor = "-fx-background-color: rgb(60, 60, 60);";
+    public static String backgroundColor = "-fx-background-color: rgb(243, 243, 243);";//35
+    public static String backgroundColor2 = "-fx-background-color: rgb(207, 216, 220);";//35
+    public static String backgroundSecColor = "-fx-background-color: rgb(69, 90, 100);"; //Most for the Buttons
     public static String backgroundThirdColor = "-fx-background-color: rgb(75, 75, 75);";
-    public static String textcolour = "rgb(245, 245, 245)";
+    public static String textcolour = "rgb(38, 50, 56)";
+    public static String textcolour2 = "rgb(243, 243, 243)";
 
     @Override
     public void start(Stage primaryStage) throws Exception{
