@@ -77,8 +77,10 @@ public class DefScreenData<T> extends DefScreen {
         clearGroup();
         
         allContentBox.getChildren().removeAll();
-        //addButtonToGroup(tableBox);
-        addGroupToGroup(inputFieldsBox);
+        addButtonToGroup(tableBox);
+        
+        DefScreen input = new DefScreen(primaryStage,"D");
+        //addGroupToGroup(inputFieldsBox);
     }
 
     public DefScreenInput addButtonInScrData(Stage primaryStage, String string,List<T> data) throws FileNotFoundException {
