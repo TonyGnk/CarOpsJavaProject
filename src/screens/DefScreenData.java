@@ -35,14 +35,14 @@ public class DefScreenData<T> extends DefScreen {
         table.setItems(observableData);
 
         // Get class of T
-        Class<?> clazz = null;
+        final Class<?>[] clazz = new Class<?>[1];
         if (!data.isEmpty()) {
-            clazz = data.get(0).getClass();
+            clazz[0] = data.get(0).getClass();
         }
 
         // Create columns for the table dynamically
-        if (clazz != null) {
-            for (Field field : clazz.getDeclaredFields()) {
+        if (clazz[0] != null) {
+            for (Field field : clazz[0].getDeclaredFields()) {
                 String fieldName = field.getName();
                 TableColumn<T, String> column = new TableColumn<>(fieldName);
                 column.setCellValueFactory(new PropertyValueFactory<>(fieldName));
@@ -59,7 +59,6 @@ public class DefScreenData<T> extends DefScreen {
             inputFields.add(textField);
         }
         
-        
         table.setPrefWidth(600); // Set the preferred width of the table
         table.setStyle("-fx-border-width: 1px; -fx-background-radius: 2px; -fx-border-color: rgb(69, 90, 100);"); // Set rounded corners style
 
@@ -75,11 +74,32 @@ public class DefScreenData<T> extends DefScreen {
         addButtonToGroup(tableBox);
 
         
+        DefButtonOption createEntryButton = new DefButtonOption("Αποθήκευση");
+        createEntryButton.setOnAction(e -> {
+            try {
+                T newEntry = (T) clazz[0].getConstructor().newInstance();
+                for (int i = 0; i < clazz[0].getDeclaredFields().length; i++) {
+                    Field field = clazz[0].getDeclaredFields()[i];
+                    String fieldName = field.getName();
+                    TextField inputField = inputFields.get(i);
+                    String fieldValue = inputField.getText();
+
+                    clazz[0].getMethod("set" + capitalizeFirstLetter(fieldName), String.class).invoke(newEntry, fieldValue);
+                }
+                observableData.add(newEntry);
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        });
+       
+        
+        
         DefScreen input = new DefScreen(primaryStage,"Δημιουργία");
         //addGroupToGroup(inputFieldsBox);
         DefButtonOption button = new DefButtonOption(input,"Δημιουργία");
         input.clearGroup();
         input.addButtonToGroup(inputFieldsBox);
+        input.addButtonToGroup(createEntryButton);
         
         addButtonToGroup(button);	
     }
@@ -91,4 +111,11 @@ public class DefScreenData<T> extends DefScreen {
 		
 		return screen;
 	}
+    
+    private String capitalizeFirstLetter(String str) {
+        if (str == null || str.length() == 0) {
+            return str;
+        }
+        return str.substring(0, 1).toUpperCase() + str.substring(1);
+    }
 }

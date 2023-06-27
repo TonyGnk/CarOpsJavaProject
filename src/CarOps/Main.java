@@ -1,5 +1,8 @@
 package CarOps;
 import screens.*;
+
+import java.util.ArrayList;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
@@ -26,6 +29,11 @@ public class Main extends Application {
         Session s1 = new Session("Παράδειγμα", "03/07/23", "ZMP-4931");
         Client s2 = new Client("Γιάννης", "Γαβριηλίδης",231043110, "Βενιζέλου 23, Θεσσαλονίκη", "John@gmail.com");
         Vehicle s3 = new Vehicle("ZMP-4931","Toyota","Yaris", 2011);
+        Report s4 = new Report("Data");
+        //TaskAssignment s5 = new TaskAssignment("Γιώργος", RepairTask aRepairTask) {
+        
+        //RepairFolder s5 = new RepairFolder(s1,1930,1000,ArrayList<Task> aListOfTasks){
+        
         
         //Start Screen
         StartScr startScr = new StartScr(primaryStage);

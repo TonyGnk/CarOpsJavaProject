@@ -52,7 +52,7 @@ public class SupervisorEngineer extends Engineer {
 	
 	private void AssignRepairTask(Engineer anEngineer,RepairTask aRepairTask,Repair aRepair) {
 		
-		TaskAssignment anAssignment=new TaskAssignment(anEngineer,aRepairTask);
+		TaskAssignment anAssignment=new TaskAssignment("name",aRepairTask);
 		aRepair.getListOfAssignments().add(anAssignment);
 		anEngineer.setAvailable(false);
 	}
