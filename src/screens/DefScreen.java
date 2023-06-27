@@ -109,6 +109,7 @@ public class DefScreen<T> extends VBox {
     protected void addGroupToGroup(VBox button) {
     	allContentBox.getChildren().addAll(connectAsLabel,button,contentBox);
     }
+    
 
     
 

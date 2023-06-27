@@ -18,11 +18,15 @@ import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
+import javafx.scene.control.TextField;
 
 import java.lang.reflect.Field;
 
 public class DefScreenData<T> extends DefScreen {
+	protected VBox inputFieldsBox;  // the VBox that will hold the input fields
+    protected List<TextField> inputFields;  // list of TextField that represent the class T fields
 	protected HBox tableBox;
 	public DefScreenData(Stage primaryStage, String Label, List<T> data) throws FileNotFoundException {
         super(primaryStage, Label);
@@ -50,7 +54,17 @@ public class DefScreenData<T> extends DefScreen {
                 table.getColumns().add(column);
             }
         }
-
+        
+        inputFieldsBox = new VBox();
+        inputFields = new ArrayList<>();
+        for (TableColumn<T, ?> column : table.getColumns()) {
+            TextField textField = new TextField();
+            textField.setPromptText(column.getText());
+            inputFieldsBox.getChildren().add(textField);
+            inputFields.add(textField);
+        }
+        
+        
         table.setPrefWidth(600); // Set the preferred width of the table
         table.setStyle("-fx-border-width: 1px; -fx-background-radius: 2px; -fx-border-color: rgb(69, 90, 100);"); // Set rounded corners style
 
@@ -63,7 +77,8 @@ public class DefScreenData<T> extends DefScreen {
         clearGroup();
         
         allContentBox.getChildren().removeAll();
-        addButtonToGroup(tableBox);
+        //addButtonToGroup(tableBox);
+        addGroupToGroup(inputFieldsBox);
     }
 
     public DefScreenInput addButtonInScrData(Stage primaryStage, String string,List<T> data) throws FileNotFoundException {
