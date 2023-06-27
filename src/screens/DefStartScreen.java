@@ -21,11 +21,14 @@ public class DefStartScreen extends VBox {
 	protected VBox allContentBox;
 	protected HBox contentBoxLarge;
 	protected HBox contentBox;
+	protected Label connectAsLabel;
+    protected Stage stage;	
 
     public DefStartScreen(Stage primaryStage) throws FileNotFoundException {
         super();
-
-        Label connectAsLabel = new DefTextHeader("Ποιος θα χρησιμοποιήσει το CarOps? BETA");
+        this.stage = primaryStage;    
+        
+        connectAsLabel = new DefTextHeader("Ποιος θα χρησιμοποιήσει το CarOps? BETA");
         DefButtonOption closeButton = new DefButtonOption("Κλείσιμο");
         closeButton.setOnAction(e -> primaryStage.close());
         
@@ -43,6 +46,7 @@ public class DefStartScreen extends VBox {
         
         contentBoxLarge = new HBox();
         contentBoxLarge.setAlignment(Pos.CENTER);
+        contentBoxLarge.setSpacing(10);
    
         connectAsLabel.setPadding(new Insets(0,10,0,10));
     	contentBoxLarge.setPadding(new Insets(10));
@@ -61,5 +65,13 @@ public class DefStartScreen extends VBox {
     protected void addButtonToGroup(DefButtonStart button) {
     	contentBoxLarge.getChildren().add(button);
     }
+    
+    public Stage getstage() {
+		return this.stage;		
+	}
+	public String getLabel() {
+	    return connectAsLabel.getText();
+	}
+    
 }
 

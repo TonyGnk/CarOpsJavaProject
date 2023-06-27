@@ -1,6 +1,7 @@
 package screens;
 
 import java.io.FileNotFoundException;
+import java.util.List;
 
 import CarOps.Main;
 import javafx.geometry.Insets;
@@ -14,13 +15,13 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class DefScreen extends VBox {
+public class DefScreen<T> extends VBox {
     protected VBox allContentBox;
     protected HBox contentBoxLarge;
     protected HBox contentBox;
     protected Label connectAsLabel;
 
-    public DefScreen(Stage primaryStage,String Label) throws FileNotFoundException {
+    public DefScreen (Stage primaryStage,String Label) throws FileNotFoundException {
         super();
         
         connectAsLabel = new DefTextHeader(Label);
@@ -40,7 +41,7 @@ public class DefScreen extends VBox {
         // Create a container for the buttons
         allContentBox = new VBox();
         allContentBox.setAlignment(Pos.TOP_CENTER);
-        allContentBox.setStyle(Main.backgroundColor2+"-fx-border-width: 3px;"+"-fx-border-radius: 10px; -fx-background-radius:10px; -fx-border-color: rgb(176, 190, 197);");
+        allContentBox.setStyle(Main.backgroundColor2+"-fx-border-width: 3px;"+"-fx-border-radius: 10px; -fx-background-radius:10px; -fx-border-color: rgb(207, 216, 220);");
         allContentBox.setPadding(new Insets(10));
         VBox.setVgrow(allContentBox, Priority.ALWAYS);
         
@@ -69,6 +70,7 @@ public class DefScreen extends VBox {
         allContentBox.setMargin(contentBox, new Insets(5,0,0,0));
     	connectAsLabel.setPadding(new Insets(0,10,0,10));
     	contentBoxLarge.setPadding(new Insets(10));
+    	contentBoxLarge.setSpacing(10);
     	contentBox.setPadding(new Insets(10));
         
         contentBox.getChildren().addAll(backButton);
@@ -77,6 +79,11 @@ public class DefScreen extends VBox {
         VBox.setMargin(allContentBox, new Insets(6));
         getChildren().addAll(allContentBox);
     }
+    
+    
+    
+    
+    
    
 
     protected void addButtonToGroup(Button button) {
@@ -98,4 +105,32 @@ public class DefScreen extends VBox {
     	allContentBox.setMargin(button, new Insets(5,0,0,0));
     	allContentBox.getChildren().addAll(connectAsLabel,button,contentBox);
     }
+    
+    protected void addGroupToGroup(VBox button) {
+    	allContentBox.getChildren().addAll(connectAsLabel,button,contentBox);
+    }
+
+    
+
+	public DefScreen addButtonInScr(Stage primaryStage, String string) throws FileNotFoundException {
+		DefScreen screen = new DefScreen(primaryStage,string); 
+		DefButtonStart button = new DefButtonStart(screen,string);
+		contentBoxLarge.getChildren().add(button);	
+		return screen;
+	}
+	public DefScreenData addButtonInScr(Stage primaryStage,DefStartScreen backscreen, String string,List<T> data) throws FileNotFoundException {
+		DefScreenData screen = new DefScreenData(primaryStage,string,data); 
+		DefButtonStart button = new DefButtonStart(screen,string);
+		
+		contentBoxLarge.getChildren().add(button);		
+		return screen;
+	}
+	public DefScreenInput addButtonInScr(Stage primaryStage, String string,List<T> data, String input) throws FileNotFoundException {
+		DefScreenInput screen = new DefScreenInput(primaryStage,string,data); 
+		DefButtonStart button = new DefButtonStart(screen,string);
+		contentBoxLarge.getChildren().add(button);	
+		return screen;
+	}
+	
+	
 }

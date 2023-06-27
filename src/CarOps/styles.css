@@ -1,31 +1,8 @@
-.def-button {
-    -fx-background-color: transparent;
-    -fx-background-radius: 40;
-    -fx-border-color: transparent;
-    -fx-text-fill: white;
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-    -fx-padding: 10px;
-    -fx-transition-duration: 0.3s;
-    -fx-transition-property: background-color;
-}
 
-.def-button:hover {
-    -fx-background-color: rgb(30, 30, 30);
+#my-table .column-header {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 15 15 0 0; 
+    -fx-padding: 4px;
+    -fx-border-color: #aaa;
+    -fx-border-radius: 15 15 0 0;
 }
-
-.my-table {
-    -fx-background-color: #000000;
-    -fx-border-radius: 20;
-    -fx-background-radius: 20;
-}
-
-.my-table .table-row-cell:filled:selected, .my-table .table-row-cell:filled:hover {
-    -fx-background: #bfbfbf;
-}
-
-.my-table .column-header {
-    -fx-background-color: #808080;
-    -fx-text-fill: white;
-}
-

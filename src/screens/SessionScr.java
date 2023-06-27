@@ -29,8 +29,8 @@ public class SessionScr extends DefScreenData {
 
         // Add the table to the VBox
 
-        DefScreen creation = new CreateSessionScr(primaryStage, "Νέο Ραντεβού");
-        Button creationButton = new DefButtonOption(creation, "Νέο Ραντεβού");
-        addButtonToGroup(creationButton);
+        //DefScreen creation = new DefScreenInput(primaryStage, "Νέο Ραντεβού");
+        //Button creationButton = new DefButtonOption(creation, "Νέο Ραντεβού");
+        //addButtonToGroup(creationButton);
     }
 }

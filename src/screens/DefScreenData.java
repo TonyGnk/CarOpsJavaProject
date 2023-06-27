@@ -15,9 +15,12 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
 import java.io.FileNotFoundException;
 import java.util.List;
+
+import java.lang.reflect.Field;
 
 public class DefScreenData<T> extends DefScreen {
 	protected HBox tableBox;
@@ -25,45 +28,32 @@ public class DefScreenData<T> extends DefScreen {
         super(primaryStage, Label);
 
         TableView<T> table = new TableView<>();
-
+        Label placeholder = new Label("Δεν υπάρχουν στοιχεία");
+        table.setPlaceholder(placeholder);
+        
         // Create the ObservableList from the ArrayList
         ObservableList<T> observableData = FXCollections.observableArrayList(data);
         table.setItems(observableData);
 
-        // Create columns for the table
-        TableColumn<T, String> nameColumn = new TableColumn<>("Name");
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        // Get class of T
+        Class<?> clazz = null;
+        if (!data.isEmpty()) {
+            clazz = data.get(0).getClass();
+        }
 
-        TableColumn<T, String> dateColumn = new TableColumn<>("Date");
-        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
-
-        TableColumn<T, String> plateColumn = new TableColumn<>("Plate");
-        plateColumn.setCellValueFactory(new PropertyValueFactory<>("plate"));
-
-        TableColumn<T, String> editColumn = new TableColumn<>("Επεξεργασία");
-        editColumn.setCellFactory(param -> new TableCell<>() {
-            final Button btn = new Button("Επεξεργασία");
-
-            @Override
-            public void updateItem(String item, boolean empty) {
-                super.updateItem(item, empty);
-                if (empty) {
-                    setGraphic(null);
-                } else {
-                    btn.setOnAction(event -> {
-                        T session = getTableView().getItems().get(getIndex());
-                        // Call your screen here passing the session data
-                    });
-                    setGraphic(btn);
-                }
+        // Create columns for the table dynamically
+        if (clazz != null) {
+            for (Field field : clazz.getDeclaredFields()) {
+                String fieldName = field.getName();
+                TableColumn<T, String> column = new TableColumn<>(fieldName);
+                column.setCellValueFactory(new PropertyValueFactory<>(fieldName));
+                table.getColumns().add(column);
             }
-        });
+        }
 
-        table.getColumns().add(nameColumn);
-        table.getColumns().add(dateColumn);
-        table.getColumns().add(plateColumn);
-        table.getColumns().add(editColumn);
-        
+        table.setPrefWidth(600); // Set the preferred width of the table
+        table.setStyle("-fx-border-width: 1px; -fx-background-radius: 2px; -fx-border-color: rgb(69, 90, 100);"); // Set rounded corners style
+
         tableBox = new HBox();
     	tableBox.setSpacing(10);
     	tableBox.setAlignment(Pos.CENTER);
@@ -74,6 +64,13 @@ public class DefScreenData<T> extends DefScreen {
         
         allContentBox.getChildren().removeAll();
         addButtonToGroup(tableBox);
-
     }
+
+    public DefScreenInput addButtonInScrData(Stage primaryStage, String string,List<T> data) throws FileNotFoundException {
+		DefScreenInput screen = new DefScreenInput(primaryStage,string,data); 
+		DefButtonOption button = new DefButtonOption(screen,string);
+		addButtonToGroup(button);	
+		
+		return screen;
+	}
 }

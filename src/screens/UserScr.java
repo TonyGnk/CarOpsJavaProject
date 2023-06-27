@@ -6,8 +6,8 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class UserSecretaryHome extends DefScreen {
-    public UserSecretaryHome(Stage primaryStage,String Label) throws FileNotFoundException {
+public class UserScr extends DefScreen {
+    public UserScr(Stage primaryStage,String Label) throws FileNotFoundException {
         super(primaryStage,Label);
         DefScreen rantebou = new SessionScr(primaryStage,"Ραντεβού");
         //DefScreen rantebou2 = new SessionScr(primaryStage);
@@ -16,5 +16,8 @@ public class UserSecretaryHome extends DefScreen {
         
         addButtonToGroup(rantebouButton);
         //addButtonToGroup(rantebouButton2);
+        
+  
     }
+  
 }
