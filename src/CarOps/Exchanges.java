@@ -4,10 +4,13 @@ package CarOps;
 public class Exchanges {
 	private int cost; 
 	private int exchangeID;
+	private Session aSession;
 	
-	public Exchanges(int cost, int exchangeID) {
+	public Exchanges(int cost,Session aSession) {
 		this.cost=cost;
-		this.exchangeID=exchangeID;
+		this.aSession=aSession;
+		this.exchangeID=Registry.Exchanges.size() + 1;
+		Registry.Exchanges.add(this);
 	}
 	
 	//Getters & Setters

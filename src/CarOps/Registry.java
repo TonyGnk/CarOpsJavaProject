@@ -16,6 +16,7 @@ public class Registry {
 	public static ArrayList<TaskAssignment> TaskAssignments = new ArrayList<TaskAssignment>();
 	public static ArrayList<Task> Tasks = new ArrayList<Task>();
 	public static ArrayList<Vehicle> Vehicles = new ArrayList<Vehicle>();
+	public static ArrayList<Exchanges> Exchanges = new ArrayList<Exchanges>();
 	
 	public ArrayList<Repair> GetSupervisorsEngRepairs(int SupervisorID){
 		ArrayList<Repair> ListOfRepairs=new ArrayList<Repair>();

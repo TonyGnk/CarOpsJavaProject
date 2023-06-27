@@ -26,6 +26,15 @@ public class Secretary extends SystemUser {
 			aRegistry.RepairFolders.get(i).PrintDetails();		
 		}
 	}
+	public void CreateSession(String name,String Date,String Plate) {
+		
+		Session newSession=new Session(name,Date,Plate,Registry.Sessions.size()+1);
+	}
+	
+   public void RemoveSession(Session aSession) {
+		
+		Registry.Sessions.remove(aSession.getSessionID()-1);
+	}
 	//Έγκριση του φακέλου επισκευής απο την γραμματεία και μετατροπή σε επικευή
 	
 	public void ApproveRepairFolder(RepairFolder aRepairFolder) {
