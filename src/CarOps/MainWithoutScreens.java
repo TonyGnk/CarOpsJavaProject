@@ -19,8 +19,8 @@ public class MainWithoutScreens {
 		Car newCar=secretary.CreateNewCar("ΚΖΝ-1234","BMW","i4 M50", 2021);
 
 		//Δημιουργία Ραντεβού
-		Session Session1=secretary.CreateSession(client.getFirstName()+" "+client.getLastName(), newCar.getPlate(), "28-6-2023");
-		Session Session2=secretary.CreateSession(client.getFirstName()+" "+client.getLastName(), newCar.getPlate(), "30-6-2023");
+		Session Session1=secretary.CreateSession(client.getFirstName()+" "+client.getLastName(), newCar.getPlate(), "28-6-2023",client);
+		Session Session2=secretary.CreateSession(client.getFirstName()+" "+client.getLastName(), newCar.getPlate(), "30-6-2023",client);
 		
 		//Δημιουργία Ανταλλακτικών και Εργασιών Επισκευής
 		Task Task1=new Task("Αλλαγή λαδιών",20);

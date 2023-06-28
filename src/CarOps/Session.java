@@ -7,15 +7,18 @@ public class Session {
     private String name;
     private String date;
     private String plate;
+    public Client client;
 
     
-    public Session(String name, String date, String plate) {
+    public Session(String name, String date, String plate, Client cl) {
         this.name = name;
         this.date = date;
         this.plate = plate;
-        this.sessionID = Registry.Sessions.size()+1;
-		Registry.Sessions.add(this);     
+        this.client = cl;
+        this.sessionID = Registry.Sessions.size() + 1;
+        Registry.Sessions.add(this);
     }
+
     
     public String getName() {
 		return name;
@@ -40,6 +43,9 @@ public class Session {
 	public String getDate() {
 		return date;
 	}
+	public Client getClient() {
+        return client;
+    }
 
 	public void setDate(String date) {
 		this.date = date;
@@ -67,6 +73,10 @@ public class Session {
 
 	public void setFolderID(int folderID) {
 		this.folderID = folderID;
+	}
+	
+	public void setClient(Client client) {
+		this.client = client;
 	}
 
 	private int sessionID;

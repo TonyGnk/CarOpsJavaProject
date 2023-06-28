@@ -1,86 +1,108 @@
- package CarOps;
+package CarOps;
+
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 public class Client {
 
-	private String FirstName;
-	private String LastName;
-	private String Phone;
-	private String Address;
-	private String email;
-	private int ClientID;
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private String address;
+    private String email;
+    private int clientID;
+    private StringProperty fullName;
 
-	public void PrintDetails() {
-		System.out.println("First Name: "+ FirstName);
-		System.out.println("LastName "+ LastName);
-		System.out.println("Phone: "+ Phone);
-		System.out.println("Address: "+ Address);
-		System.out.println("email: "+ email);
-		System.out.println("ClientID: "+ ClientID);
-		
-	}
+    public Client(String firstName, String lastName, String phone, String address, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.address = address;
+        this.email = email;
+        this.clientID = Registry.Clients.size() + 1;
+        Registry.Clients.add(this);
+        this.fullName = new SimpleStringProperty(firstName + " " + lastName);
+    }
 
+    public Client(String firstName, String lastName) {
+        this(firstName, lastName, null, null, null);
+    }
 
+    public void printDetails() {
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Phone: " + phone);
+        System.out.println("Address: " + address);
+        System.out.println("Email: " + email);
+        System.out.println("Client ID: " + clientID);
+    }
 
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public Client(String firstName, String lastName, String phone, String address, String email) {
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-		super();
-		FirstName = firstName;
-		LastName = lastName;
-		Phone = phone;
-		Address = address;
-		this.email = email;
-		ClientID = Registry.Clients.size() + 1;
-		Registry.Clients.add(this);
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public String getFirstName() {
-		return FirstName;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public void setFirstName(String firstName) {
-		FirstName = firstName;
-	}
+    public String getPhone() {
+        return phone;
+    }
 
-	public String getLastName() {
-		return LastName;
-	}
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
-	public void setLastName(String lastName) {
-		LastName = lastName;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getPhone() {
-		return Phone;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setPhone(String phone) {
-		Phone = phone;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getAddress() {
-		return Address;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setAddress(String address) {
-		Address = address;
-	}
+    public int getClientID() {
+        return clientID;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setClientID(int clientID) {
+        this.clientID = clientID;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public StringProperty fullNameProperty() {
+        return fullName;
+    }
 
-	public int getClientID() {
-		return ClientID;
-	}
+    public String getFullName() {
+        return fullName.get();
+    }
 
-	public void setClientID(int clientID) {
-		ClientID = clientID;
-	}
-	
+    public void setFullName(String fullName) {
+        this.fullName.set(fullName);
+    }
 
+    public static Client searchClientByName(String firstName) {
+        for (Client client : Registry.Clients) {
+            if (client.getFirstName().equalsIgnoreCase(firstName)) {
+                return client;
+            }
+        }
+        return null; // Client not found
+    }
 }

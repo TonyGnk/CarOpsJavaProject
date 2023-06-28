@@ -72,7 +72,56 @@ public class ClientsInput extends DefScreen<Client> {
         addButtonToGroup(gridPane);
     }
 
-    private void fillFieldsWithClientData() {
+    public ClientsInput(Stage primaryStage, ClientForSession clientForSession) throws FileNotFoundException {
+		// TODO Auto-generated constructor stub
+    	super(primaryStage, "Επεξεργασία");
+
+        this.client = client;
+        this.parentTable = parentTable;
+
+        Label firstNameLabel = new Label("First Name:");
+        Label lastNameLabel = new Label("Last Name:");
+        Label phoneLabel = new Label("Phone:");
+        Label addressLabel = new Label("Address:");
+        Label emailLabel = new Label("Email:");
+
+        firstNameField = new TextField();
+        lastNameField = new TextField();
+        phoneField = new TextField();
+        addressField = new TextField();
+        emailField = new TextField();
+
+        createButton = new DefButtonOption("Αποθήκευση");
+        createButton.setOnAction(e -> createOrUpdateClient(primaryStage));
+
+        GridPane gridPane = new GridPane();
+        gridPane.setHgap(10);
+        gridPane.setVgap(10);
+        gridPane.setAlignment(Pos.CENTER);
+        gridPane.setPadding(new Insets(10));
+
+        gridPane.add(firstNameLabel, 0, 0);
+        gridPane.add(firstNameField, 1, 0);
+        gridPane.add(lastNameLabel, 0, 1);
+        gridPane.add(lastNameField, 1, 1);
+        gridPane.add(phoneLabel, 0, 2);
+        gridPane.add(phoneField, 1, 2);
+        gridPane.add(addressLabel, 0, 3);
+        gridPane.add(addressField, 1, 3);
+        gridPane.add(emailLabel, 0, 4);
+        gridPane.add(emailField, 1, 4);
+        gridPane.add(createButton, 0, 5, 2, 1);
+        addButtonToGroupPop(createButton);
+        
+        if (client != null) {
+            fillFieldsWithClientData();
+        }
+
+        clearGroup();
+        addButtonToGroup(gridPane);
+	}
+
+	private void fillFieldsWithClientData() {
         firstNameField.setText(client.getFirstName());
         lastNameField.setText(client.getLastName());
         phoneField.setText(String.valueOf(client.getPhone()));

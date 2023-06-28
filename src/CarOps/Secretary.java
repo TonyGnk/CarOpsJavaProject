@@ -27,8 +27,8 @@ public class Secretary extends SystemUser {
 		}
 	}
 	
-	public Session CreateSession(String name,String plate,String Date) {
-		Session newSession=new Session(name,Date,plate);
+	public Session CreateSession(String name,String plate,String Date, Client cl) {
+		Session newSession=new Session(name,Date,plate,cl);
 		return newSession;
 		
 	}

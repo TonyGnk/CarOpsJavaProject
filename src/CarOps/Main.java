@@ -26,8 +26,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         registry = new Registry(); //New Registry
-        Session s1 = new Session("Παράδειγμα", "03/07/23", "ZMP-4931");
+        
         Client s2 = new Client("Γιάννης", "Γαβριηλίδης","231043110", "Βενιζέλου 23, Θεσσαλονίκη", "John@gmail.com");
+        Session s1 = new Session("Παράδειγμα", "03/07/23", "ZMP-4931",s2);
         Vehicle s3 = new Vehicle("ZMP-4931","Toyota","Yaris", 2011);
         Report s4 = new Report("Data");
         //TaskAssignment s5 = new TaskAssignment("Γιώργος", RepairTask aRepairTask) {
