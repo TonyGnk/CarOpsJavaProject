@@ -4,7 +4,7 @@ public class Client {
 
 	private String FirstName;
 	private String LastName;
-	private int Phone;
+	private String Phone;
 	private String Address;
 	private String email;
 	private int ClientID;
@@ -39,7 +39,7 @@ public class Client {
 	 * @param email
 	 */
 
-	public Client(String firstName, String lastName, int phone, String address, String email) {
+	public Client(String firstName, String lastName,String phone, String address, String email) {
 		super();
 		FirstName = firstName;
 		LastName = lastName;
@@ -66,11 +66,11 @@ public class Client {
 		LastName = lastName;
 	}
 
-	public int getPhone() {
+	public String getPhone() {
 		return Phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		Phone = phone;
 	}
 

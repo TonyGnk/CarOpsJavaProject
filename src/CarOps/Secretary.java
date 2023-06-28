@@ -26,6 +26,12 @@ public class Secretary extends SystemUser {
 			aRegistry.RepairFolders.get(i).PrintDetails();		
 		}
 	}
+	
+	public Session CreateSession(String name,String plate,String Date) {
+		Session newSession=new Session(name,Date,plate);
+		return newSession;
+		
+	}
 
 	
    public void RemoveSession(Session aSession) {
@@ -34,31 +40,32 @@ public class Secretary extends SystemUser {
 	}
 	//Έγκριση του φακέλου επισκευής απο την γραμματεία και μετατροπή σε επικευή
 	
-	public void ApproveRepairFolder(RepairFolder aRepairFolder) {
-		aRepairFolder.setStatus("Approved");
-		
+	public Repair ApproveRepairFolder(RepairFolder aRepairFolder) {
+		return aRepairFolder.ApprovedRepairFolder();
 	}
 	
 	
-	public void CreateNewCar(String plate, String brand, String model, int productionYear) {
+	public Car CreateNewCar(String plate, String brand, String model, int productionYear) {
 		Car newCar =new Car(plate,brand,model,productionYear) ;
-		
+		return newCar;
 		
 	}
 	
-	public void CreateNewBicycle(String plate, String brand, String model, int productionYear,int cubism) {
+	public Bicycle CreateNewBicycle(String plate, String brand, String model, int productionYear,int cubism) {
 		Bicycle newBicycle =new Bicycle(plate,brand,model,productionYear,cubism) ;
+		return newBicycle;
 		
 	}
 	
-	public void CreateNewTruck(String plate, String brand, String model, int productionYear,int useFullLoad) {
+	public Truck CreateNewTruck(String plate, String brand, String model, int productionYear,int useFullLoad) {
 		Truck newTruck =new Truck(plate,brand,model,productionYear,useFullLoad) ;
+		return newTruck;
 
 		
 	}
 	
-	public void CreateNewClient(String firstName, String lastName, int phone, String address, String email) {
+	public Client CreateNewClient(String firstName, String lastName, String phone, String address, String email) {
 		Client newClient=new Client(firstName,lastName,phone,address,email);
-		
+		return newClient;
 	}
 }

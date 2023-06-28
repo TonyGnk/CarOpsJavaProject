@@ -11,6 +11,8 @@ public class Repair {
 	private SupervisorEngineer aSupervisorEngineer;
 	private ArrayList<TaskAssignment> ListOfAssignments=new ArrayList<TaskAssignment>();
 	private ArrayList<RepairTask> ListOfRepairTasks=new ArrayList<RepairTask>();
+	private ArrayList<AssignmentSparePart> ListOfParts=new ArrayList<AssignmentSparePart>();
+	private float TotalCost;
 
 
 	public Repair(RepairFolder aRepairFolder,String Status) {
@@ -30,6 +32,17 @@ public class Repair {
 	public void ClaimRepair(SupervisorEngineer aSuperEng) {
 		status = "claimed";
 		this.aSupervisorEngineer=aSuperEng;
+	}
+	public float getTotalCost() {
+		float tempcost=0;
+		for(AssignmentSparePart Part:ListOfParts) {
+			tempcost+=Part.getaSparePart().getCostPerPiece() * Part.getTaskQuantity();
+		}
+		for(RepairTask Task:ListOfRepairTasks) {
+			tempcost+=Task.getaTask().getCost();
+		}
+		this.TotalCost=tempcost;
+		return this.TotalCost;
 	}
 	
 
@@ -104,5 +117,18 @@ public class Repair {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	public ArrayList<AssignmentSparePart> getListOfParts() {
+		return ListOfParts;
+	}
+
+	public void setListOfParts(ArrayList<AssignmentSparePart> listOfParts) {
+		ListOfParts = listOfParts;
+	}
+
+	public void setTotalCost(float totalCost) {
+		TotalCost = totalCost;
+	}
+	
 
 }
