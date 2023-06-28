@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class MainWithoutScreens {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//Δημιουργία Γραμματείας και Μηχανικών
 		Secretary secretary=new Secretary("user1","pass1","Maria","Βλαχοδήμου");
 		SimpleEngineer Engineer1=new SimpleEngineer("user2","pass2","Κώστας","Ευγενίδης");
