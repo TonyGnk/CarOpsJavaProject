@@ -15,12 +15,14 @@ public class RepairFolder {
 	private ArrayList<RepairTask> RepairTaskCatalog = new ArrayList<RepairTask>();
 	
 	//Έγκριση του φακέλου επισκευής απο την γραμματεία και δημιουργία επικευής που αντιστοιχεί στον φάκελο
-	public void setStatus(String status) {
-		this.status = status;
-		if(status.toLowerCase()=="approved"){
-			Repair newRepair=new Repair(this,"wait");
+	public Repair ApprovedRepairFolder() {
+		this.status = "Approved";
+		Repair newRepair=new Repair(this,"wait");
+		this.aRepair=newRepair;
+		return newRepair;
 			
-		}
+
+
 	}
 	
     //Second Constructor for use in the HostEngineer Class
@@ -77,6 +79,10 @@ public class RepairFolder {
 	public String getStatus() {
 		return status;
 	}
+	public  void setStatus(String status) {
+		this.status=status;
+		
+	}
 
 
 	public int getEstTime() {
@@ -112,5 +118,22 @@ public class RepairFolder {
 	public void setRepairTaskCatalog(ArrayList<RepairTask> repairTaskCatalog) {
 		RepairTaskCatalog = repairTaskCatalog;
 	}
+
+	public Session getaSession() {
+		return aSession;
+	}
+
+	public void setaSession(Session aSession) {
+		this.aSession = aSession;
+	}
+
+	public Repair getaRepair() {
+		return aRepair;
+	}
+
+	public void setaRepair(Repair aRepair) {
+		this.aRepair = aRepair;
+	}
+	
 	
 }

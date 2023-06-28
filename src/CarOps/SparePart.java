@@ -6,10 +6,17 @@ public class SparePart {
 	private int CostPerPiece;
 	private int TotalPieces;
 
-    public SparePart (String Name,int CostPerPiece,int TotalPieces) {
+    public SparePart(String Name,int CostPerPiece,int TotalPieces) {
     	this.Name=Name;
     	this.CostPerPiece=CostPerPiece;
     	this.TotalPieces=TotalPieces;
+    	Registry.SpareParts.add(this);
+    	
+    }
+    
+    public SparePart(String Name,int CostPerPiece) {
+    	this.Name=Name;
+    	this.CostPerPiece=CostPerPiece;
     	Registry.SpareParts.add(this);
     	
     }

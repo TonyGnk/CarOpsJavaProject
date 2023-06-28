@@ -9,8 +9,9 @@ public class HostEngineer extends Engineer {
 	
 	
 	//Με τη χρήση αυτού του Constructor δημιουργείται ένας φάκελος που εκκρεμεί(stats="Pending") και για να αλλάξει πρέπει να εγκριθεί από την Γραμματεία
-	public void CreateNewRepairFolder(Session aSession,int estTime,int totalCost,ArrayList<Task> aListOfTasks) {
+	public RepairFolder CreateNewRepairFolder(Session aSession,int estTime,int totalCost,ArrayList<Task> aListOfTasks) {
 		aRepairFolder = new RepairFolder(aSession,estTime,totalCost,aListOfTasks);
+		return aRepairFolder;
 		
 	}
 	

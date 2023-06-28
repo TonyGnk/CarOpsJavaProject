@@ -13,7 +13,7 @@ public class SupervisorEngineer extends Engineer {
 	private int SupervisorID;
 	private ArrayList<Repair> ListOfRepairs;
 	
-	private void ShowMyRepairs() {
+	public void ShowMyRepairs() {
         this.ListOfRepairs=aRegistry.GetSupervisorsEngRepairs(this.SupervisorID);
         if(!(ListOfRepairs==null)) {
 		 for(int i=0;i<ListOfRepairs.size();i++) {
@@ -23,13 +23,13 @@ public class SupervisorEngineer extends Engineer {
 		else System.out.println("You don't have any Repairs");		
 	}
 	
-	private void ShowAllWaitRepairs() {		
+	public void ShowAllWaitRepairs() {		
 		for(int i=0;i<aRegistry.GetWaitRepairs().size();i++) {
 			aRegistry.GetWaitRepairs().get(i).printDetails();		
 		}
 	}
 	
-	private void ClaimRepair(Repair aRepair) {
+	public void ClaimRepair(Repair aRepair) {
 		 aRepair.ClaimRepair(this);
 		
 		
@@ -50,13 +50,14 @@ public class SupervisorEngineer extends Engineer {
 		
 	}
 	
-	private void AssignRepairTask(Engineer anEngineer,RepairTask aRepairTask,Repair aRepair) {
+	public TaskAssignment AssignRepairTask(Engineer anEngineer,RepairTask aRepairTask,Repair aRepair) {
 		
 		TaskAssignment anAssignment=new TaskAssignment("name",aRepairTask);
 		aRepair.getListOfAssignments().add(anAssignment);
 		anEngineer.setAvailable(false);
+		return anAssignment;
 	}
-	private void ChangeAssignment(Engineer anEngineer,TaskAssignment anAssignment) {
+	public void ChangeAssignment(Engineer anEngineer,TaskAssignment anAssignment) {
 		anAssignment.setAnEngineer(anEngineer);
 		
 	}

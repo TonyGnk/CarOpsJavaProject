@@ -16,4 +16,28 @@ public class AssignmentSparePart {
 		System.out.println(this.aSparePart.GetName() +","+ TaskQuantity +"quantity");
 	}
 
+	public SparePart getaSparePart() {
+		return aSparePart;
+	}
+
+	public void setaSparePart(SparePart aSparePart) {
+		this.aSparePart = aSparePart;
+	}
+
+	public TaskAssignment getaTaskAssignment() {
+		return aTaskAssignment;
+	}
+
+	public void setaTaskAssignment(TaskAssignment aTaskAssignment) {
+		this.aTaskAssignment = aTaskAssignment;
+	}
+
+	public int getTaskQuantity() {
+		return TaskQuantity;
+	}
+
+	public void setTaskQuantity(int taskQuantity) {
+		TaskQuantity = taskQuantity;
+	}
+
 }

@@ -15,7 +15,9 @@ public class Engineer extends SystemUser {
 		this.Available=true;
 		anAssignment.setFinished(true);
 		anAssignment.getaRepairTask().setStatus("finished");
-		
+		for(AssignmentSparePart Part:ListOfParts) {
+		 anAssignment.getaRepairTask().getaRepairFolder().getaRepair().getListOfParts().add(Part);
+		}
 		
 	};
 	
