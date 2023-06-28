@@ -83,7 +83,7 @@ public class ClientsInput extends DefScreen<Client> {
     private void createOrUpdateClient(Stage primaryStage) {
         String firstName = firstNameField.getText();
         String lastName = lastNameField.getText();
-        int phone = Integer.parseInt(phoneField.getText());
+        String phone = phoneField.getText();
         String address = addressField.getText();
         String email = emailField.getText();
 
