@@ -25,7 +25,7 @@ public class ClientsInput extends DefScreen<Client> {
     private ClientsTable parentTable;
 
     public ClientsInput(Stage primaryStage, Client client, ClientsTable parentTable) throws FileNotFoundException {
-        super(primaryStage, "Client Input");
+        super(primaryStage, "Επεξεργασία");
 
         this.client = client;
         this.parentTable = parentTable;

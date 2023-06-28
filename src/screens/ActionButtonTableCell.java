@@ -27,7 +27,7 @@ public class ActionButtonTableCell<S> extends TableCell<S, Void> {
 
     @Override
     protected void updateItem(Void item, boolean empty) {
-        super.updateItem(item, empty);
+    	super.updateItem(item, empty);
         if (empty) {
             setGraphic(null);
         } else {
