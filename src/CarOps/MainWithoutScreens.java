@@ -113,8 +113,8 @@ public class MainWithoutScreens {
 		System.out.println(SparePart6.getName() + " : "+ SparePart6.getCostPerPiece() + "€" + "\n");
 		
 		System.out.println("--- Στοιχεία Επισκευών ---");
-		System.out.println("Εκτιμώμενος Χρόνος Επισκευής 1ης Επισκευής: " + Repair1.getaRepairFolder().getEstTime() + " ώρες ,Συνολικό Κόστος: " + Repair1.getTotalCost() );
-		System.out.println("Εκτιμώμενος Χρόνος Επισκευής 2ης Επισκευής: " + Repair2.getaRepairFolder().getEstTime() + " ώρες ,Συνολικό Κόστος: " + Repair2.getTotalCost() );
+		System.out.println("Εκτιμώμενος Χρόνος Επισκευής 1ης Επισκευής: " + Repair1.getaRepairFolder().getEstTime() + " ώρες ,Συνολικό Κόστος: " + Repair1.getTotalCost() + "€");
+		System.out.println("Εκτιμώμενος Χρόνος Επισκευής 2ης Επισκευής: " + Repair2.getaRepairFolder().getEstTime() + " ώρες ,Συνολικό Κόστος: " + Repair2.getTotalCost() + "€");
 	
 
 	}
