@@ -104,13 +104,6 @@ public class DefScreenData<T> extends DefScreen {
         addButtonToGroup(button);	
     }
 
-    public DefScreenInput addButtonInScrData(Stage primaryStage, String string,List<T> data) throws FileNotFoundException {
-		DefScreenInput screen = new DefScreenInput(primaryStage,string,data); 
-		DefButtonOption button = new DefButtonOption(screen,string);
-		addButtonToGroup(button);	
-		
-		return screen;
-	}
     
     private String capitalizeFirstLetter(String str) {
         if (str == null || str.length() == 0) {

@@ -15,7 +15,10 @@ public class StartScr extends DefStartScreen {
         DefScreen gramateia = addButtonInScrFirst(primaryStage,"Γραμματεία");
         	DefScreenData rantevou = gramateia.addButtonInScr(primaryStage,this,"Ραντεβού",Main.registry.Sessions);
         	DefScreenData pelates = gramateia.addButtonInScr(primaryStage,this,"Πελάτες",Main.registry.Clients);	
-        	DefScreenData oximata = gramateia.addButtonInScr(primaryStage,this,"Οχήματα",Main.registry.Vehicles);	     
+        	DefScreenData oximata = gramateia.addButtonInScr(primaryStage,this,"Οχήματα",Main.registry.Vehicles);
+        	DefScreen clientable = new ClientsTable(primaryStage); 
+    		DefButtonStart button = new DefButtonStart(clientable,"Οχήματα");
+    		gramateia.contentBoxLarge.getChildren().add(button);
         	
         //Ιδιοκτήτης	
         DefScreen owner = addButtonInScrFirst(primaryStage,"Ιδιοκτήτης");

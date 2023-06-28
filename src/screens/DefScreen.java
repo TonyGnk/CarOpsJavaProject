@@ -9,6 +9,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
@@ -86,9 +87,11 @@ public class DefScreen<T> extends VBox {
     
     
     
+    protected void addButtonToGroupPop(Button button) {
+    	contentBox.getChildren().clear();
+    	contentBox.getChildren().add(button);
+    }
     
-   
-
     protected void addButtonToGroup(Button button) {
     	contentBox.getChildren().add(button);
     }
@@ -112,10 +115,16 @@ public class DefScreen<T> extends VBox {
     	allContentBox.setMargin(button, new Insets(5,0,0,0));
     	allContentBox.getChildren().addAll(connectAsLabel,button,contentBox);
     }
+    protected void addButtonToGroup(GridPane gridpane) {
+    	allContentBox.setMargin(gridpane, new Insets(5,0,0,0));
+    	allContentBox.getChildren().addAll(connectAsLabel,gridpane,contentBox);
+    }
+    
     
     protected void addGroupToGroup(VBox button) {
     	allContentBox.getChildren().addAll(connectAsLabel,button,contentBox);
     }
+    
     
 
     
@@ -126,17 +135,19 @@ public class DefScreen<T> extends VBox {
 		contentBoxLarge.getChildren().add(button);	
 		return screen;
 	}
+	
+	public DefScreen addButtonInScr2(Stage primaryStage, String string) throws FileNotFoundException {
+		DefScreen screen = new DefScreen(primaryStage,string); 
+		DefButtonStart button = new DefButtonStart(screen,string);
+		contentBoxLarge.getChildren().add(button);	
+		return screen;
+	}
+	
 	public DefScreenData addButtonInScr(Stage primaryStage,DefStartScreen backscreen, String string,List<T> data) throws FileNotFoundException {
 		DefScreenData screen = new DefScreenData(primaryStage,string,data); 
 		DefButtonStart button = new DefButtonStart(screen,string);
 		
 		contentBoxLarge.getChildren().add(button);		
-		return screen;
-	}
-	public DefScreenInput addButtonInScr(Stage primaryStage, String string,List<T> data, String input) throws FileNotFoundException {
-		DefScreenInput screen = new DefScreenInput(primaryStage,string,data); 
-		DefButtonStart button = new DefButtonStart(screen,string);
-		contentBoxLarge.getChildren().add(button);	
 		return screen;
 	}
 	

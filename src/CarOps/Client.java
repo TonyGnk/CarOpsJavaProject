@@ -8,17 +8,6 @@ public class Client {
 	private String Address;
 	private String email;
 	private int ClientID;
-	
-
-	/**
-	 * 
-	 * @param FirstName
-	 * @param LastName
-	 * @param Phone
-	 * @param Adress
-	 * @param email
-	 * @param ClientID
-	 */
 
 	public void PrintDetails() {
 		System.out.println("First Name: "+ FirstName);
@@ -30,16 +19,11 @@ public class Client {
 		
 	}
 
-	/**
-	 * 
-	 * @param FirstName
-	 * @param LastName
-	 * @param Phone
-	 * @param Address
-	 * @param email
-	 */
 
-	public Client(String firstName, String lastName,String phone, String address, String email) {
+
+
+	public Client(String firstName, String lastName, String phone, String address, String email) {
+
 		super();
 		FirstName = firstName;
 		LastName = lastName;
