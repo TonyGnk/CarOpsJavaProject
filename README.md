@@ -64,7 +64,7 @@ This repository is hosted on GitHub, providing easy access to all team members f
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU General Public License (GPL) (Άδεια Γενικού Δημόσιου Κοινού) - see the [LICENSE](LICENSE) file for details.
 
 ## Team Members
 - Antonis Giannakovitis - [TonyGNK](https://github.com/TonyGnk) - iis22067@uom.edu.gr
