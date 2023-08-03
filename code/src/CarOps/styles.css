@@ -1,0 +1,8 @@
+
+#my-table .column-header {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 15 15 0 0; 
+    -fx-padding: 4px;
+    -fx-border-color: #aaa;
+    -fx-border-radius: 15 15 0 0;
+}

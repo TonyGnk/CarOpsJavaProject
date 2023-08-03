@@ -1,37 +1,73 @@
+# CarOps - Automotive Workshop Management System
 
+CarOps is a software project aimed at improving the efficiency and revenue of a hypothetical automotive workshop. This repository contains the code and documentation for the development of the CarOps information system.
 
-# **Welcome to the CarOpsJavaProject!**
-This repository contains a Java project that focuses on car operations and management. Whether you're a car enthusiast, a developer looking to learn more about Java, or someone interested in automotive management systems, this project has something for you.
+## Disclaimer
 
-## **Introduction**
+This project is part of a university assignment conducted in the Greek language. As a result, the documentation and code comments are written in Greek. However, the README and essential project information are provided in English for accessibility.
 
-The CarOpsJavaProject aims to provide a comprehensive solution for managing various aspects of car operations. It utilizes Java programming language and incorporates object-oriented principles to create an efficient and scalable system. With this project, you can explore different functionalities related to car management, such as inventory management, maintenance tracking, and more.
+## Disclaimer (in Greek)
 
-## **Class Structure**
-[Vehicle](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Vehicle.java): Represents a vehicle object with properties like Plate,Brand,Model and ProductionYear.
+Αυτό το αποθετήριο περιέχει την ανάπτυξη του πληροφοριακού συστήματος "CarOps", το οποίο είναι ένα υποθετικό έργο λογισμικού που στοχεύει στη βελτίωση της αποδοτικότητας και των εσόδων ενός φανταστικού συνεργείου αυτοκινήτων. Το έργο αναπτύχθηκε ως μέρος μιας πανεπιστημιακής εργασίας και είναι γραμμένο στην Ελληνική γλώσσα.
 
-[SystemUser](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/SystemUser.java): Represents a user of the system with properties like username,password,firstname,lastname
+## Project Overview
 
-[Engineer](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Engineer.java) : Represents an engineer of the system which extends to a system user and checks if he is availiable or not
+In the field of software development, building a successful information system requires several stages and processes. By studying the case of the "CarOps" workshop, we can understand how knowledge and application of these steps play a crucial role in the success of an information system.
 
-[VehicleCatalog](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/VehicleCatalog.java) : Represents a catalogue of the vehicles
+The project follows the stages of Preparation, Analysis, Design, and Implementation. Each stage contributes to different aspects of the system development:
 
-[Task](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Task.java) : Represents the task  with properties like name,cost and estimatedtime
+### 1. Preparation
 
-[SparePart](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/SparePart.java) : Represent the spareparts with properties like Name,CostPerPiece and TotalPieces
+In this stage, the team defines the system's goals and conducts various analyses and studies to understand the workshop's requirements. Key activities include:
 
-[TaskAssignments](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/TaskAssignment.java) : Represents the task of each engineer with properties like EngineerID,RepairTaskID,status,TaskAssignmentID and time
+- System Request: An official document describing the project's desired outcomes, as submitted by the workshop owner.
+- Feasibility Analysis: Evaluating the workshop's needs and constraints to determine if the proposed information system is suitable.
 
-[Report](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Report.java): Represents the reports with parametres like Date and ReportID
+### 2. Analysis
 
-[Repair](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Repair.java) : Represents the repairs with parametres like repairid,repairfolder,status,registry and totalrepairs
+During this stage, the team analyzes the workshop's requirements and designs a system proposal. Key activities include:
 
-[RepairFolder](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/RepairFolder.java) : Represents the repairfolders with parametres like session,repair,repairfolder,status,estimatedtime,totalcost and registry
+- Analysis Strategy: Developing an approach to analyze the current system and identify improvement opportunities.
+- Requirement Gathering: Collecting and documenting the workshop's requirements and incorporating them into a system proposal.
 
-[Session](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Session.java) : Represents the session of each repair with parameters like date,sessionid,totalsessions and folderid
+### 3. Design
 
-[Exchanges](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Exchanges.java) : Represent the exchanges with parameters like cost and exchange id
+The Design stage focuses on planning the system and specifying its characteristics and functionalities. Key activities include:
 
-[Registry](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Registry.java) : Contains the arraylists of the JavaProgram and the loops
+- Use Case Diagrams: Representing the system's interactions and illustrating the relationships between actors and use cases.
+- Sequence Diagrams: Visualizing the system's functionality during interactions, providing insights for developers.
 
-[Main](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Main.java) : The entry point of the application, contains the main method to start the program.
+### 4. Implementation
+
+The final stage involves the actual coding of the system based on the previously designed diagrams and plans. Key activities include:
+
+- Object-Oriented Design: Implementing classes, objects, and their relationships as per the design.
+- JavaFX GUI Development: Creating a graphical user interface using the JavaFX library.
+
+## Repository Structure
+
+The repository is organized as follows:
+
+- **code**: This directory contains all the source code for the CarOps Information System. It includes the Java code for the graphical user interface and the backend functionalities, as well as any other necessary files.
+
+- **documentation**: This directory contains the project documentation, including the system request document, system proposal document, and design diagrams. Additionally, it includes the Greek language version of the project report in PDF format.
+
+## How to Contribute
+
+This repository is hosted on GitHub, providing easy access to all team members for collaboration and code sharing. Here are some guidelines for contributing:
+
+1. Clone the repository: `git clone https://github.com/your_username/CarOps.git`
+2. Create a new branch: `git checkout -b new-feature`
+3. Make your changes and commit them: `git commit -m "Add new feature"`
+4. Push your changes to the branch: `git push origin new-feature`
+5. Open a pull request on GitHub to merge your changes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Team Members
+- Antonis Giannakovitis - [TonyGNK](https://github.com/TonyGnk) - iis22067@uom.edu.gr
+- Nikos Siatras - [iis21032](https://github.com/iis21032) - iis21032@uom.edu.gr
+- Christos Sofianopoulos - [iis22023](https://github.com/iis22023) - iis22023@uom.edu.gr
+- Konstantinos Psyllas - [Kostascyber](https://github.com/Kostascyber) - iis22016@uom.edu.gr
