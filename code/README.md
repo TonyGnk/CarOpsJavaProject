@@ -1,12 +1,3 @@
-
-
-# **Welcome to the CarOpsJavaProject!**
-This repository contains a Java project that focuses on car operations and management. Whether you're a car enthusiast, a developer looking to learn more about Java, or someone interested in automotive management systems, this project has something for you.
-
-## **Introduction**
-
-The CarOpsJavaProject aims to provide a comprehensive solution for managing various aspects of car operations. It utilizes Java programming language and incorporates object-oriented principles to create an efficient and scalable system. With this project, you can explore different functionalities related to car management, such as inventory management, maintenance tracking, and more.
-
 ## **Class Structure**
 [Vehicle](https://github.com/iis22023/CarOpsJavaProject/blob/main/src/CarOps/Vehicle.java): Represents a vehicle object with properties like Plate,Brand,Model and ProductionYear.
 
