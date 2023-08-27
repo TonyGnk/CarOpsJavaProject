@@ -1,4 +1,4 @@
-# 🚗 CarOps - Automotive Workshop Management System
+# 🚗 CarOps - Automotive Workshop Operation System
 
 CarOps is a software project aimed at improving the efficiency and revenue of a hypothetical automotive workshop. This repository contains the code and documentation for the development of the CarOps information system.
 
